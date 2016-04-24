@@ -1,0 +1,11 @@
+{
+	"nativescript": {
+		"id": "org.nativescript.buttonexamplecss",
+		"tns-ios": {
+			"version": "1.7.0"
+		}
+	},
+	"dependencies": {
+		"tns-core-modules": "1.7.1"
+	}
+}
