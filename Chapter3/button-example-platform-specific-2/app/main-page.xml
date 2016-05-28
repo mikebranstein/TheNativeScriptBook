@@ -1,5 +1,10 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd">
   <StackLayout>
-    <Button text="Tap Here for iOS!" />
+    <android>
+      <Button text="Tap Here for Android!" />
+    </android>
+    <ios>
+      <Button text="Tap Here for iOS!" />
+    </ios>
   </StackLayout>
 </Page>
