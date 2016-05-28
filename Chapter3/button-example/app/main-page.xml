@@ -1,7 +1,5 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
   <StackLayout>
-    <Label text="Tap the button" class="title"/>
-    <Button text="TAP" tap="{{ onTap }}" />
-    <Label text="{{ message }}" class="message" textWrap="true"/>
+    <Button text="Tap Here! />
   </StackLayout>
 </Page>
