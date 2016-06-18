@@ -1,7 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" >
   <!-- UI Decalration -->
   <StackLayout>
-    <Image src="~/catbeard.jpg" stretch="none"/>
-    <Button text="About" />
+    <Label text="Welcome to the Tekmo App!" />
+    <Button text="About Tekmo" />
   </StackLayout>
 </Page>
