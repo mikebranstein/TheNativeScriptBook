@@ -2,6 +2,5 @@
   <!-- UI Decalration -->
   <StackLayout>
     <Label text="Welcome to the Tekmo App!" />
-    <Button text="About Tekmo" />
   </StackLayout>
 </Page>
