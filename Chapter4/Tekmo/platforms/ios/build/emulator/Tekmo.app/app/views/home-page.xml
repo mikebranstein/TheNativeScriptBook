@@ -1,6 +1,6 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" >
-  <!-- UI Decalration -->
   <StackLayout>
     <Label text="Welcome to the Tekmo App!" />
+    <Button text="About" tap="onTap" />
   </StackLayout>
 </Page>
