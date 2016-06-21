@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <StackLayout>
+    <Button text="Everything is awesome..." />
+    <Button text="when you're using NativeScript!" />
+  </StackLayout>
+</Page>
