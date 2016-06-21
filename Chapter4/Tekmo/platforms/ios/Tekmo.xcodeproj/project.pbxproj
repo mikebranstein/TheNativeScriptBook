@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+/* Begin PBXBuildFile section */
+		858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858B833A18CA111C00AB12DE /* InfoPlist.strings */; };
+		CD45EE7C18DC2D5800FB50C0 /* app in Resources */ = {isa = PBXBuildFile; fileRef = CD45EE7A18DC2D5800FB50C0 /* app */; };
+		CD62955D1BB2678900AE3A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62955C1BB2678900AE3A93 /* main.m */; };
+		9A97D55B748C4489A1378213 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B563B12E9D640CEB7E2BDDF /* Default-568h@2x.png */; };
+		BF1131CE493948A3AF50FE99 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 693560A3EAD348EC8F9C2022 /* Default-667h@2x.png */; };
+		D8868B7AB75C495ABCA0B65B /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F260DEC0764AC4829C95D9 /* Default-736h@3x.png */; };
+		FDDC2CB2520A4179B1915309 /* Default-Landscape-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3442C5CE59841D0AB463AEE /* Default-Landscape-568h@2x.png */; };
+		DD1A5D58AA56410BBAE3F48C /* Default-Landscape-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27C28FF01F3E49EABB6E7FEA /* Default-Landscape-667h@2x.png */; };
+		EDCB18FEDBB84806A27E19D0 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1B85858C7F4BCCBCDF28AE /* Default-Landscape.png */; };
+		87FC4A3F9AA043C2AB5B1647 /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F197BA9541FF4F8E80E4D405 /* Default-Landscape@2x.png */; };
+		6EDE65E23F5842E5AB044FAF /* Default-Landscape@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C15CC378C5994A8AAB15AD3C /* Default-Landscape@3x.png */; };
+		2E5FD5652FB74567AE78622F /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C6FA5B2ADBF34DBEA51B1EB7 /* Default-Portrait.png */; };
+		737472B518804B7187E65095 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B99DA409EAEB419CB1D4F971 /* Default-Portrait@2x.png */; };
+		6DDF97CA4C5C4AECA4C31DFA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A3F802D8A14E6FAACDD3CF /* Default.png */; };
+		61D91D4D4CAA4304BC44E5BF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4A7D08074D48DA90496714 /* Default@2x.png */; };
+		895852861DCE4C3F9BDFDCDF /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B023388F18490F97DFB076 /* Icon-Small-50.png */; };
+		A73477C2973842848657F631 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 563A8637DE1B45CEA8982582 /* Icon-Small-50@2x.png */; };
+		768B76A6DE0C44279A73FE0B /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = ED30397474D54985B6CF8322 /* Icon-Small.png */; };
+		FBAEAB11086F4A2DAA8394C7 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6408405F046040638BC2089B /* Icon-Small@2x.png */; };
+		0CC9BD021D0B467F8F957018 /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 63C7A993B49E468585A8E633 /* build.xcconfig */; };
+		A48F5208497D4E25B5557E1F /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A835301164438E8F64E5BC /* icon-40.png */; };
+		45AD29CF04444234A106D73D /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DC32CA1129347CA99B94FB4 /* icon-40@2x.png */; };
+		D3DB88C52A974EBC9A09810B /* icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B55287AC8E4433D92C31C14 /* icon-60.png */; };
+		7286AEA0268D4D48806CEFF2 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 379676D144E946D99A2D24FC /* icon-60@2x.png */; };
+		2BFC697AABBF44D68BCEF1EC /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 9815244630394C9CA9EE67B2 /* icon-72.png */; };
+		4AF17570C69042ADA3F8B4B6 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3414B33900724FDE85D2B316 /* icon-72@2x.png */; };
+		28674CE365F44ED1A521233D /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 68A09F6C822A4286B49FEB7E /* icon-76.png */; };
+		0DAD7459F9AB4098BFB59689 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D90D2D94BC41498FFE7F5D /* icon-76@2x.png */; };
+		08A3327698B84250B604F938 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDEBFBC4313414F81A25EEF /* icon.png */; };
+		942647C615F240198B074E76 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B81D597420DB40F09FA93AB9 /* icon@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85F5BDFC1A9363BE006B9701 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		858B832E18CA111C00AB12DE /* Tekmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tekmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B833918CA111C00AB12DE /* Tekmo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tekmo-Info.plist"; sourceTree = "<group>"; };
+		858B833B18CA111C00AB12DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		858B833F18CA111C00AB12DE /* Tekmo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tekmo-Prefix.pch"; sourceTree = "<group>"; };
+		858B843318CA22B800AB12DE /* Tekmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tekmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD45EE7A18DC2D5800FB50C0 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = "<group>"; };
+		CD62955C1BB2678900AE3A93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = internal/main.m; sourceTree = SOURCE_ROOT; };
+		CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-debug.xcconfig"; sourceTree = "<group>"; };
+		CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-release.xcconfig"; sourceTree = "<group>"; };
+		CDF4743E1BA4855C0087EA85 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		F9B8C6A31ACEDEEB00547416 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8B563B12E9D640CEB7E2BDDF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Tekmo/Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		693560A3EAD348EC8F9C2022 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-667h@2x.png"; path = "Tekmo/Resources/Default-667h@2x.png"; sourceTree = "<group>"; };
+		C6F260DEC0764AC4829C95D9 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-736h@3x.png"; path = "Tekmo/Resources/Default-736h@3x.png"; sourceTree = "<group>"; };
+		F3442C5CE59841D0AB463AEE /* Default-Landscape-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape-568h@2x.png"; path = "Tekmo/Resources/Default-Landscape-568h@2x.png"; sourceTree = "<group>"; };
+		27C28FF01F3E49EABB6E7FEA /* Default-Landscape-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape-667h@2x.png"; path = "Tekmo/Resources/Default-Landscape-667h@2x.png"; sourceTree = "<group>"; };
+		EE1B85858C7F4BCCBCDF28AE /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "Tekmo/Resources/Default-Landscape.png"; sourceTree = "<group>"; };
+		F197BA9541FF4F8E80E4D405 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x.png"; path = "Tekmo/Resources/Default-Landscape@2x.png"; sourceTree = "<group>"; };
+		C15CC378C5994A8AAB15AD3C /* Default-Landscape@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@3x.png"; path = "Tekmo/Resources/Default-Landscape@3x.png"; sourceTree = "<group>"; };
+		C6FA5B2ADBF34DBEA51B1EB7 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "Tekmo/Resources/Default-Portrait.png"; sourceTree = "<group>"; };
+		B99DA409EAEB419CB1D4F971 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x.png"; path = "Tekmo/Resources/Default-Portrait@2x.png"; sourceTree = "<group>"; };
+		85A3F802D8A14E6FAACDD3CF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Tekmo/Resources/Default.png"; sourceTree = "<group>"; };
+		3E4A7D08074D48DA90496714 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Tekmo/Resources/Default@2x.png"; sourceTree = "<group>"; };
+		B9B023388F18490F97DFB076 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Tekmo/Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
+		563A8637DE1B45CEA8982582 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "Tekmo/Resources/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		ED30397474D54985B6CF8322 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Tekmo/Resources/Icon-Small.png"; sourceTree = "<group>"; };
+		6408405F046040638BC2089B /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Tekmo/Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		63C7A993B49E468585A8E633 /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = build.xcconfig; path = "Tekmo/Resources/build.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; };
+		64A835301164438E8F64E5BC /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40.png"; path = "Tekmo/Resources/icon-40.png"; sourceTree = "<group>"; };
+		8DC32CA1129347CA99B94FB4 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40@2x.png"; path = "Tekmo/Resources/icon-40@2x.png"; sourceTree = "<group>"; };
+		5B55287AC8E4433D92C31C14 /* icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60.png"; path = "Tekmo/Resources/icon-60.png"; sourceTree = "<group>"; };
+		379676D144E946D99A2D24FC /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60@2x.png"; path = "Tekmo/Resources/icon-60@2x.png"; sourceTree = "<group>"; };
+		9815244630394C9CA9EE67B2 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Tekmo/Resources/icon-72.png"; sourceTree = "<group>"; };
+		3414B33900724FDE85D2B316 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72@2x.png"; path = "Tekmo/Resources/icon-72@2x.png"; sourceTree = "<group>"; };
+		68A09F6C822A4286B49FEB7E /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76.png"; path = "Tekmo/Resources/icon-76.png"; sourceTree = "<group>"; };
+		F2D90D2D94BC41498FFE7F5D /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76@2x.png"; path = "Tekmo/Resources/icon-76@2x.png"; sourceTree = "<group>"; };
+		EEDEBFBC4313414F81A25EEF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = "Tekmo/Resources/icon.png"; sourceTree = "<group>"; };
+		B81D597420DB40F09FA93AB9 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Tekmo/Resources/icon@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		858B83F418CA22B800AB12DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		858B832518CA111C00AB12DE = {
+			isa = PBXGroup;
+			children = (
+				E070579D1B39A9D000214BF1 /* Resources */,
+				858B833718CA111C00AB12DE /* Tekmo */,
+				858B833018CA111C00AB12DE /* Frameworks */,
+				858B832F18CA111C00AB12DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		858B832F18CA111C00AB12DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				858B832E18CA111C00AB12DE /* Tekmo.app */,
+				858B843318CA22B800AB12DE /* Tekmo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		858B833018CA111C00AB12DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		858B833718CA111C00AB12DE /* Tekmo */ = {
+			isa = PBXGroup;
+			children = (
+				CD45EE7A18DC2D5800FB50C0 /* app */,
+				F9B8C6A21ACEDEEB00547416 /* LaunchScreen.xib */,
+				858B833818CA111C00AB12DE /* Supporting Files */,
+			);
+			path = Tekmo;
+			sourceTree = "<group>";
+		};
+		858B833818CA111C00AB12DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDF4743E1BA4855C0087EA85 /* build.xcconfig */,
+				CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */,
+				CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */,
+				858B833918CA111C00AB12DE /* Tekmo-Info.plist */,
+				858B833A18CA111C00AB12DE /* InfoPlist.strings */,
+				CD62955C1BB2678900AE3A93 /* main.m */,
+				858B833F18CA111C00AB12DE /* Tekmo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E070579D1B39A9D000214BF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B563B12E9D640CEB7E2BDDF /* Default-568h@2x.png */,
+				693560A3EAD348EC8F9C2022 /* Default-667h@2x.png */,
+				C6F260DEC0764AC4829C95D9 /* Default-736h@3x.png */,
+				F3442C5CE59841D0AB463AEE /* Default-Landscape-568h@2x.png */,
+				27C28FF01F3E49EABB6E7FEA /* Default-Landscape-667h@2x.png */,
+				EE1B85858C7F4BCCBCDF28AE /* Default-Landscape.png */,
+				F197BA9541FF4F8E80E4D405 /* Default-Landscape@2x.png */,
+				C15CC378C5994A8AAB15AD3C /* Default-Landscape@3x.png */,
+				C6FA5B2ADBF34DBEA51B1EB7 /* Default-Portrait.png */,
+				B99DA409EAEB419CB1D4F971 /* Default-Portrait@2x.png */,
+				85A3F802D8A14E6FAACDD3CF /* Default.png */,
+				3E4A7D08074D48DA90496714 /* Default@2x.png */,
+				B9B023388F18490F97DFB076 /* Icon-Small-50.png */,
+				563A8637DE1B45CEA8982582 /* Icon-Small-50@2x.png */,
+				ED30397474D54985B6CF8322 /* Icon-Small.png */,
+				6408405F046040638BC2089B /* Icon-Small@2x.png */,
+				63C7A993B49E468585A8E633 /* build.xcconfig */,
+				64A835301164438E8F64E5BC /* icon-40.png */,
+				8DC32CA1129347CA99B94FB4 /* icon-40@2x.png */,
+				5B55287AC8E4433D92C31C14 /* icon-60.png */,
+				379676D144E946D99A2D24FC /* icon-60@2x.png */,
+				9815244630394C9CA9EE67B2 /* icon-72.png */,
+				3414B33900724FDE85D2B316 /* icon-72@2x.png */,
+				68A09F6C822A4286B49FEB7E /* icon-76.png */,
+				F2D90D2D94BC41498FFE7F5D /* icon-76@2x.png */,
+				EEDEBFBC4313414F81A25EEF /* icon.png */,
+				B81D597420DB40F09FA93AB9 /* icon@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		858B83EF18CA22B800AB12DE /* Tekmo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "Tekmo" */;
+			buildPhases = (
+				C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */,
+				858B83F218CA22B800AB12DE /* Sources */,
+				CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */,
+				858B83F418CA22B800AB12DE /* Frameworks */,
+				858B842C18CA22B800AB12DE /* Resources */,
+				85F5BDFC1A9363BE006B9701 /* Embed Frameworks */,
+				CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tekmo;
+			productName = JDBridgeApp;
+			productReference = 858B843318CA22B800AB12DE /* Tekmo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		858B832618CA111C00AB12DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TNS;
+				LastUpgradeCheck = 500;
+				ORGANIZATIONNAME = Telerik;
+			};
+			buildConfigurationList = 858B832918CA111C00AB12DE /* Build configuration list for PBXProject "Tekmo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 858B832518CA111C00AB12DE;
+			productRefGroup = 858B832F18CA111C00AB12DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				858B83EF18CA22B800AB12DE /* Tekmo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		858B842C18CA22B800AB12DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD45EE7C18DC2D5800FB50C0 /* app in Resources */,
+				858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */,
+				9A97D55B748C4489A1378213 /* Default-568h@2x.png in Resources */,
+				BF1131CE493948A3AF50FE99 /* Default-667h@2x.png in Resources */,
+				D8868B7AB75C495ABCA0B65B /* Default-736h@3x.png in Resources */,
+				FDDC2CB2520A4179B1915309 /* Default-Landscape-568h@2x.png in Resources */,
+				DD1A5D58AA56410BBAE3F48C /* Default-Landscape-667h@2x.png in Resources */,
+				EDCB18FEDBB84806A27E19D0 /* Default-Landscape.png in Resources */,
+				87FC4A3F9AA043C2AB5B1647 /* Default-Landscape@2x.png in Resources */,
+				6EDE65E23F5842E5AB044FAF /* Default-Landscape@3x.png in Resources */,
+				2E5FD5652FB74567AE78622F /* Default-Portrait.png in Resources */,
+				737472B518804B7187E65095 /* Default-Portrait@2x.png in Resources */,
+				6DDF97CA4C5C4AECA4C31DFA /* Default.png in Resources */,
+				61D91D4D4CAA4304BC44E5BF /* Default@2x.png in Resources */,
+				895852861DCE4C3F9BDFDCDF /* Icon-Small-50.png in Resources */,
+				A73477C2973842848657F631 /* Icon-Small-50@2x.png in Resources */,
+				768B76A6DE0C44279A73FE0B /* Icon-Small.png in Resources */,
+				FBAEAB11086F4A2DAA8394C7 /* Icon-Small@2x.png in Resources */,
+				0CC9BD021D0B467F8F957018 /* build.xcconfig in Resources */,
+				A48F5208497D4E25B5557E1F /* icon-40.png in Resources */,
+				45AD29CF04444234A106D73D /* icon-40@2x.png in Resources */,
+				D3DB88C52A974EBC9A09810B /* icon-60.png in Resources */,
+				7286AEA0268D4D48806CEFF2 /* icon-60@2x.png in Resources */,
+				2BFC697AABBF44D68BCEF1EC /* icon-72.png in Resources */,
+				4AF17570C69042ADA3F8B4B6 /* icon-72@2x.png in Resources */,
+				28674CE365F44ED1A521233D /* icon-76.png in Resources */,
+				0DAD7459F9AB4098BFB59689 /* icon-76@2x.png in Resources */,
+				08A3327698B84250B604F938 /* icon.png in Resources */,
+				942647C615F240198B074E76 /* icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PreBuild";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-pre-build\"";
+			showEnvVarsInLog = 0;
+		};
+		CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PostBuild";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-post-build\"";
+			showEnvVarsInLog = 0;
+		};
+		CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PreLink";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-pre-link\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		858B83F218CA22B800AB12DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD62955D1BB2678900AE3A93 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		858B833A18CA111C00AB12DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				858B833B18CA111C00AB12DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F9B8C6A21ACEDEEB00547416 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9B8C6A31ACEDEEB00547416 /* en */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		858B835818CA111C00AB12DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Debug;
+		};
+		858B835918CA111C00AB12DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Release;
+		};
+		858B843118CA22B800AB12DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_MODULES_AUTOLINK = NO;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tekmo/Tekmo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Tekmo/Tekmo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Tekmo;
+				VALID_ARCHS = "armv7 arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		858B843218CA22B800AB12DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_MODULES_AUTOLINK = NO;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tekmo/Tekmo-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Tekmo/Tekmo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Tekmo;
+				VALID_ARCHS = "armv7 arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		858B832918CA111C00AB12DE /* Build configuration list for PBXProject "Tekmo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858B835818CA111C00AB12DE /* Debug */,
+				858B835918CA111C00AB12DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "Tekmo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858B843118CA22B800AB12DE /* Debug */,
+				858B843218CA22B800AB12DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 858B832618CA111C00AB12DE /* Project object */;
+}
