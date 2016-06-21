@@ -1,8 +1,8 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" >
   <StackLayout>
     <Label text="Welcome to the Tekmo App!" />
-    <Label text="Do you remember the first time you played the the classics like Super Marshmallow Man and Vampire Valkyrie? We do. And we loved it!">
-    <Label text="Have you ever wanted to share your classic game play experiences with your kids? Look no further because Tekmo has what you're looking for. Relive the adventure. Relive the thrills. Relive the classics with Tekmo.">
+    <Label text="Do you remember the first time you played the the classics like Super Marshmallow Man and Vampire Valkyrie? We do. And we loved it!" />
+    <Label text="Have you ever wanted to share your classic game play experiences with your kids? Look no further because Tekmo has what you're looking for. Relive the adventure. Relive the thrills. Relive the classics with Tekmo." />
     <Button text="About" tap="onTap" />
   </StackLayout>
 </Page>
