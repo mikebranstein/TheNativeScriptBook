@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <StackLayout>
+    <GridLayout rows="*" columns="2*,*" width="300" height="100">
+      <Label row="0" col="0" text="1" style="background-color: #CCCCCC;" />
+      <Label row="0" col="1" text="2" style="background-color: #EEEEEE;" />
+    </GridLayout>
+  </StackLayout>
+</Page>

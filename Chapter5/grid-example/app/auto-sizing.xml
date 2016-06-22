@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <StackLayout>
+    <GridLayout rows="auto,auto" columns="auto,auto" width="300" height="300">
+      <Label row="0" col="0" text="Short" style="background-color: #CCCCCC;" />
+      <Label row="0" col="1" text="Longer" style="background-color: #EEEEEE;" />
+      <StackLayout row="1" col="0" style="background-color: #EEEEEE;">
+        <Label text="Longer..." />
+        <Label text="...and Taller" />
+      </StackLayout>
+      <Label row="1" col="1" text="Even Longer" style="background-color: #CCCCCC;" />
+    </GridLayout>
+  </StackLayout>
+</Page>
