@@ -9,7 +9,8 @@
       <Label textWrap="true" text="And what about Vampire Valkyrie: a side-scrolling adventure into the depths of Transylvania seeking out Dracula and his minions. After gathering your supplies in local towns, you embarked on a journey through the countryside to rescue trapped village people. Don't forget to bring your stake and darn your garlic. When you finally meet Dracula face-to-face, holy water won't save you. The fate of the world is on your shoulders." />
       <Label textWrap="true" text="Lastly, Super Marshmallow Man is the iconic landscape filled with clouds and wonderous sky scenes. Jump through the 12 worlds of Mallow Kingdom while avoiding the hungry Chompers. Don't get too close to the flames or you'll melt!" />
       <Button text="About" tap="onTap_About" />
-      <Button text="Contact Us" tap="onTap_ContactUs" />
+      <Button text="Products" tap="onTap_Products" />
+      <Button text="Contact Us" tap="onTap_ContactUs" />      
     </StackLayout>
   </ScrollView>
 </Page>

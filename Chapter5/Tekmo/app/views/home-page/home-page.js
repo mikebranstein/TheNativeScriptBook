@@ -21,3 +21,14 @@ function onTap_ContactUs() {
     frames.topmost().navigate(navigationEntry);
 }
 exports.onTap_ContactUs = onTap_ContactUs;
+
+function onTap_Products() {
+    var navigationEntry = {
+        moduleName: "views/products/products",
+        transition: {
+            name: "slideBottom"
+        }
+    };
+    frames.topmost().navigate(navigationEntry);
+}
+exports.onTap_Products = onTap_Products;
