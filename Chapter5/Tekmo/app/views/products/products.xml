@@ -1,32 +1,33 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd">
   <StackLayout>
-    <GridLayout rows="*,*,*" columns="*,*" width="300" height="450">
-        <StackLayout row="0" col="0" style="background-color: #CCCCCC;">
+    <GridLayout rows="*,*,*,*" columns="*,*" width="300" height="600">
+        <StackLayout row="0" col="0" rowSpan="1" colSpan="2" style="background-color: #DDDDDD;">
+            <Label text="Super Marshmallow Man" textWrap="true" /> 
+            <Image src="res://game" width="75" height="75" stretch="aspectFill" /> 
+            <Label textWrap="true" text="Escape from certain death in this wild adventure!" />
+            <Label text="On Sale! $14.99" />
+        </StackLayout>
+        <StackLayout row="1" col="0" style="background-color: #CCCCCC;">
             <Label text="Couch Commander" textWrap="true" /> 
             <Image src="res://game" width="75" height="75" stretch="aspectFill" /> 
             <Label text="$24.99" />
         </StackLayout>
-        <StackLayout row="0" col="1" style="background-color: #EEEEEE;">
+        <StackLayout row="1" col="1" style="background-color: #EEEEEE;">
             <Label text="Mummy Madness" textWrap="true" /> 
             <Image src="res://game" width="75" height="75" stretch="aspectFill" /> 
             <Label text="$32.99" />
         </StackLayout>
-        <StackLayout row="1" col="0" style="background-color: #EEEEEE;">
+        <StackLayout row="2" col="0" style="background-color: #EEEEEE;">
             <Label text="Pyro Robots" textWrap="true" /> 
             <Image src="res://game" width="75" height="75" stretch="aspectFill" /> 
             <Label text="$19.99" />
         </StackLayout>
-        <StackLayout row="1" col="1" style="background-color: #CCCCCC;">
+        <StackLayout row="2" col="1" style="background-color: #CCCCCC;">
             <Label text="Rescue Pups" textWrap="true" /> 
             <Image src="res://game" width="75" height="75" stretch="aspectFill" /> 
             <Label text="$9.99" />
         </StackLayout>
-        <StackLayout row="2" col="0" style="background-color: #CCCCCC;">
-            <Label text="Super Marshmallow Man" textWrap="true" /> 
-            <Image src="res://game" width="75" height="75" stretch="aspectFill" /> 
-            <Label text="$24.99" />
-        </StackLayout>
-        <StackLayout row="2" col="1" style="background-color: #EEEEEE;">
+        <StackLayout row="3" col="0" style="background-color: #CCCCCC;">
             <Label text="Vampire Valkyrie" textWrap="true" /> 
             <Image src="res://game" width="75" height="75" stretch="aspectFill" /> 
             <Label text="$21.99" />
