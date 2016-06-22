@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <StackLayout>
+    <Label text="Breaking News Headline" class="headline" />
+    <Label text="when you're using NativeScript!" />
+  </StackLayout>
+</Page>
