@@ -1,8 +1,14 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" >
-  <StackLayout>
-    <Label textWrap="true" text="Welcome to the Tekmo App!" />
-    <Label textWrap="true" text="Do you remember the first time you played the the classics like Super Marshmallow Man and Vampire Valkyrie? We do. And we loved it!" />
-    <Label textWrap="true" text="Have you ever wanted to share your classic game play experiences with your kids? Look no further because Tekmo has what you're looking for. Relive the adventure. Relive the thrills. Relive the classics with Tekmo." />
-    <Button text="About" tap="onTap" />
-  </StackLayout>
+  <ScrollView>
+    <StackLayout>
+      <Label textWrap="true" text="Welcome to the Tekmo App!" />
+      <Label textWrap="true" text="Do you remember the first time you played the the classics like Super Marshmallow Man and Vampire Valkyrie? We do. And we loved it!" />
+      <Label textWrap="true" text="Have you ever wanted to share your classic game play experiences with your kids? Look no further because Tekmo has what you're looking for. Relive the adventure. Relive the thrills. Relive the classics with Tekmo." />
+      <Label textWrap="true" text="In the early 90's, it all started with Rescue Pups. This multi-player vintage platformer brought the Rambo-style side-scrolling gun fights to life in your living room. True, it was impossible to beat with the 3 lives you got by default, but that's why everyone knew the 50 lives code by heart: up, up, down, down, left, right, left, right, B, A, Start. And if you wanted a friend to play along, you could throw in the Select, Start at the end." />
+      <Label textWrap="true" text="You remember how cool it was to get 50 lives, so imagine how much your kids would enjoy playing through Rescue Pups. " />
+      <Label textWrap="true" text="And what about Vampire Valkyrie: a side-scrolling adventure into the depths of Transylvania seeking out Dracula and his minions. After gathering your supplies in local towns, you embarked on a journey through the countryside to rescue trapped village people. Don't forget to bring your stake and darn your garlic. When you finally meet Dracula face-to-face, holy water won't save you. The fate of the world is on your shoulders." />
+      <Label textWrap="true" text="Lastly, Super Marshmallow Man is the iconic landscape filled with clouds and wonderous sky scenes. Jump through the 12 worlds of Mallow Kingdom while avoiding the hungry Chompers. Don't get too close to the flames or you'll melt!" />
+      <Button text="About" tap="onTap" />
+    </StackLayout>
+  </ScrollView>
 </Page>
