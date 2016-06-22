@@ -4,6 +4,7 @@
             <Label textWrap="true" text="Contact us by submitting a message below." />
             <TextField hint="Enter the subject..." />
             <TextView hint="Enter the message..." />
+            <Button text="Submit" tap="onTap" /> 
         </StackLayout>
     </ScrollView>
 </Page>
