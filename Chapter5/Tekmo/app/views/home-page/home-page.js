@@ -1,13 +1,23 @@
 var frames = require("ui/frame");
-var navigationEntry = {
-    moduleName: "views/about-page",
-    transition: {
-        name: "slideBottom"
-    }
-};
 
-function onTap() {
+function onTap_About() {
+    var navigationEntry = {
+        moduleName: "views/about-page",
+        transition: {
+            name: "slideBottom"
+        }
+    };
     frames.topmost().navigate(navigationEntry);
 }
+exports.onTap_About = onTap_About;
 
-exports.onTap = onTap;
+function onTap_ContactUs() {
+    var navigationEntry = {
+        moduleName: "views/contact-us/contact-us",
+        transition: {
+            name: "slideBottom"
+        }
+    };
+    frames.topmost().navigate(navigationEntry);
+}
+exports.onTap_ContactUs = onTap_ContactUs;

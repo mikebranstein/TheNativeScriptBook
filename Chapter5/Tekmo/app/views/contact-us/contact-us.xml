@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+    <StackLayout>
+        <Label textWrap="true" text="Contact us by submitting a message below." />
+        <Label text="Subject" />
+        <TextField />
+        <Label text="Body" />
+        <TextView />
+    </StackLayout>
+</Page>
