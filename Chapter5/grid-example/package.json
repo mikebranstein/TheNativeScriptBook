@@ -1,0 +1,12 @@
+{
+	"description": "NativeScript Application",
+	"license": "SEE LICENSE IN <your-license-filename>",
+	"readme": "NativeScript Application",
+	"repository": "<fill-your-repository-here>",
+	"nativescript": {
+		"id": "org.nativescript.gridexample"
+	},
+	"dependencies": {
+		"tns-core-modules": "2.0.1"
+	}
+}
