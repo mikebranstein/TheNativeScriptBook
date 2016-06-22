@@ -1,5 +1,12 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd">
   <StackLayout>
-    
+    <GridLayout rows="*,*,*" columns="*,*" width="300" height="450">
+      <Label row="0" col="0" text="row: 0, col: 0" style="background-color: #CCCCCC;" />
+      <Label row="0" col="1" text="row: 0, col: 1" style="background-color: #EEEEEE;" />
+      <Label row="1" col="0" text="row: 1, col: 0" style="background-color: #EEEEEE;" />
+      <Label row="1" col="1" text="row: 1, col: 1" style="background-color: #CCCCCC;" />
+      <Label row="2" col="0" text="row: 2, col: 0" style="background-color: #CCCCCC;" />
+      <Label row="2" col="1" text="row: 2, col: 1" style="background-color: #EEEEEE;" />
+    </GridLayout>
   </StackLayout>
 </Page>
