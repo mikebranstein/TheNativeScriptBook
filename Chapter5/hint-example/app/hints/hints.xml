@@ -1,20 +1,19 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
   <StackLayout>
-    <Label text="Without Textbox Hints" cssClass="title" />
+    <Label text="With Textbox Hints" cssClass="title" />
     <Border borderRadius="20" borderWidth="2" borderColor="#aaaaaa" width="350">
       <GridLayout rows="40,40,40,40,40" columns="125,*" height="425" width="350" cssClass="grid">
         <Label text="First Name" row="0" col="0" cssClass="rowOdd" />
-        <TextView  row="0" col="1" cssClass="rowOdd" />
+        <TextView hint="enter first name" row="0" col="1" cssClass="rowOdd" />
         <Label text="Last Name" row="1" col="0" />
-        <TextView  row="1" col="1" />
+        <TextView hint="enter second name" row="1" col="1" />
         <Label text="Date of Birth" row="2" col="0" cssClass="rowOdd" />
-        <TextView  row="2" col="1" cssClass="rowOdd" />
+        <TextView hint="DOB (mm/dd/yyyy)" row="2" col="1" cssClass="rowOdd" />
         <Label text="Zip" row="3" col="0" />
-        <TextView  row="3" col="1" />
+        <TextView hint="4 or 6 digit zip code" row="3" col="1" />
         <Label text="Email" row="4" col="0" cssClass="rowOdd" />
-        <TextView  row="4" col="1" cssClass="rowOdd" />
+        <TextView hint="name@email.com" row="4" col="1" cssClass="rowOdd" />
       </GridLayout>
     </Border>
-    <Button text="With Hints" tap="onTap" />
   </StackLayout>
 </Page>

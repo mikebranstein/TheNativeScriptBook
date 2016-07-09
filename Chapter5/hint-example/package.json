@@ -4,7 +4,10 @@
 	"readme": "NativeScript Application",
 	"repository": "<fill-your-repository-here>",
 	"nativescript": {
-		"id": "org.nativescript.hintexample"
+		"id": "org.nativescript.hintexample",
+		"tns-ios": {
+			"version": "2.1.1"
+		}
 	},
 	"dependencies": {
 		"tns-core-modules": "2.1.0"

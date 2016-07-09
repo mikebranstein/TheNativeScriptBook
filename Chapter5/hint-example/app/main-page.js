@@ -1,7 +1,12 @@
-var createViewModel = require("./main-view-model").createViewModel;
+var frames = require("ui/frame");
 
-function onNavigatingTo(args) {
-    var page = args.object;
-    page.bindingContext = createViewModel();
+function onTap() {
+    var navigationEntry = {
+        moduleName: "hints/hints",
+        transition: {
+            name: "slideBottom"
+        }
+    };
+    frames.topmost().navigate(navigationEntry);
 }
-exports.onNavigatingTo = onNavigatingTo;
+exports.onTap = onTap;
