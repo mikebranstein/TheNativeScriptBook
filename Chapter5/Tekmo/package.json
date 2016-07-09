@@ -4,10 +4,7 @@
 	"readme": "NativeScript Application",
 	"repository": "<fill-your-repository-here>",
 	"nativescript": {
-		"id": "org.nativescript.Tekmo",
-		"tns-ios": {
-			"version": "2.0.1"
-		}
+		"id": "org.nativescript.Tekmo"
 	},
 	"dependencies": {
 		"tns-core-modules": "2.0.1"
