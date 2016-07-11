@@ -2,7 +2,7 @@ var frames = require("ui/frame");
 
 function onTap_About() {
     var navigationEntry = {
-        moduleName: "views/about-page",
+        moduleName: "views/about/about",
         transition: {
             name: "slideBottom"
         }

@@ -1,9 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" >
-  <ScrollView>
-    <StackLayout>
-      <Label textWrap="true" text="Welcome to the Tekmo App!" />
-      <Button text="About" tap="onTap_About" />
-      <Button text="Contact Us" tap="onTap_ContactUs" />      
-    </StackLayout>
-  </ScrollView>
+  <StackLayout>
+    <Label textWrap="true" text="Welcome to the Tekmo App!" />
+    <Button text="About" tap="onTap_About" />
+    <Button text="Contact Us" tap="onTap_ContactUs" />      
+  </StackLayout>
 </Page>
