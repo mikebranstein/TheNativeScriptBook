@@ -1,6 +1,0 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" >
-  <StackLayout>
-    <Label text="Small company that wants to bring you the best in retro gaming!" textWrap="true" />
-    <Label text="Come visit us in Louisville, KY" />
-  </StackLayout>
-</Page>
