@@ -1,5 +1,4 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd">
-  <StackLayout>
     <GridLayout rows="*,*,*,*" columns="*,*" width="300" height="600">
         <StackLayout row="0" col="0" rowSpan="1" colSpan="2" style="background-color: #DDDDDD;">
             <Label text="Super Marshmallow Man" textWrap="true" /> 
@@ -33,5 +32,4 @@
             <Label text="$21.99" />
         </StackLayout>
     </GridLayout>
-  </StackLayout>
 </Page>
