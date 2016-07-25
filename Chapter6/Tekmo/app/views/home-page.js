@@ -13,7 +13,7 @@ exports.onTap_About = onTap_About;
 
 function onTap_ContactUs() {
     var navigationEntry = {
-        moduleName: "views/contact-us/contact-us",
+        moduleName: "views/contact-us-page",
         transition: {
             name: "slideBottom"
         }
@@ -24,7 +24,8 @@ exports.onTap_ContactUs = onTap_ContactUs;
 
 function onTap_Products() {
     var navigationEntry = {
-        moduleName: "views/products/products",
+        moduleName: "views/products-page",
+        clearHistory: true,
         transition: {
             name: "slideBottom"
         }

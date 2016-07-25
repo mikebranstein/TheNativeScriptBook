@@ -1,9 +1,9 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd">
-    <GridLayout rows="*,*,*,*" columns="*,*" width="300" height="600">
+    <GridLayout rows="auto,*,*,*" columns="*,*" width="300" height="600">
         <StackLayout row="0" col="0" rowSpan="1" colSpan="2" style="background-color: #DDDDDD;">
             <Label text="Super Marshmallow Man" textWrap="true" /> 
             <Image src="res://game" width="75" height="75" stretch="aspectFill" /> 
-            <Label textWrap="true" text="Escape from certain death in this wild adventure!" />
+            <Label textWrap="true" text="Escape from certain death in this wild adventure set against a stunning backdrop of clouds. Eat or be eaten!" />
             <Label text="On Sale! $14.99" />
         </StackLayout>
         <StackLayout row="1" col="0" style="background-color: #CCCCCC;">
