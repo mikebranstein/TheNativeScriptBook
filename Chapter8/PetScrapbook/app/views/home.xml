@@ -1,0 +1,12 @@
+<Page>
+  <ScrollView>
+    <StackLayout>
+      <Label class="header" text="Pet Scrapbook" />
+      <Image src="~/images/home.png"></Image>
+      <!--<Button text="About" tap="onTap_About" />
+      <Button text="Products" tap="onTap_Products" />
+      <Button text="Contact Us" tap="onTap_ContactUs" />      -->
+      <Label class="footer" text="Brosteins ©2016" />
+    </StackLayout>
+  </ScrollView>
+</Page>
