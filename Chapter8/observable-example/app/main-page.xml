@@ -1,0 +1,5 @@
+<Page>
+  <StackLayout>
+    <Label text="Observable Example" class="title"/>
+  </StackLayout>
+</Page>
