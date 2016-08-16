@@ -1,4 +1,4 @@
-<Page loaded="loaded">
+<Page loaded="onLoaded">
   <ScrollView>
     <StackLayout>
         <Label class="header" text="{{title}}" />

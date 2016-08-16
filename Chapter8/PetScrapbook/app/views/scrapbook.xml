@@ -1,0 +1,10 @@
+<Page loaded="onLoaded">
+    <StackLayout>
+        <TextField class="header" text="{{title}}" />
+        <Label text="Age: " />
+        <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />
+        <Label text="Gender: " />
+        <ListPicker selectedIndex="{{ gender }}" />
+        <Button tap="onTap" text="Done"/>
+    </StackLayout>
+</Page>
