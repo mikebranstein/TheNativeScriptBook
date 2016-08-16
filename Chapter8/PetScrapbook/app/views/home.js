@@ -1,4 +1,5 @@
 var observable = require("data/observable");
+var frame = require("ui/frame");
 
 exports.onLoaded = function(args) {
     var page = args.object;
@@ -9,3 +10,7 @@ exports.onLoaded = function(args) {
     
     page.bindingContext = home;
 };
+
+exports.onContinueTap = function(args){
+    frame.topmost().navigate("views/scrapbook");
+}
