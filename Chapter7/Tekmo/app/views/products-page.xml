@@ -1,0 +1,41 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+    <GridLayout rows="*,*,*,*" columns="*,*" width="300" height="600">
+        <StackLayout row="0" col="0" colSpan="2" class="tile highlight">
+            <StackLayout class="tile-title">
+                <Label text="Super Marshmallow Man" textWrap="true" />
+            </StackLayout>
+            <Label textWrap="true" text="Escape from certain death in this wild adventure!" />
+            <Label text="$34.99" class="price" />
+        </StackLayout>
+        <StackLayout row="1" col="0" class="tile">
+            <StackLayout class="tile-title">
+                <Label text="Couch Commander" textWrap="true" /> 
+            </StackLayout>
+            <Label text="$24.99" class="price" />
+        </StackLayout>
+        <StackLayout row="1" col="1" class="tile">
+            <StackLayout class="tile-title">
+                <Label text="Mummy Madness" textWrap="true" /> 
+            </StackLayout>
+            <Label text="$32.99" class="price" />
+        </StackLayout>
+        <StackLayout row="2" col="0" class="tile">
+            <StackLayout class="tile-title">
+                <Label text="Pyro Robots" textWrap="true" /> 
+            </StackLayout>
+            <Label text="$19.99" class="price" />
+        </StackLayout>
+        <StackLayout row="2" col="1" class="tile">
+            <StackLayout class="tile-title">
+                <Label text="Rescue Pups" textWrap="true" /> 
+            </StackLayout>
+            <Label text="$9.99" class="price" />
+        </StackLayout>
+        <StackLayout row="3" col="0" class="tile">
+            <StackLayout class="tile-title">
+                <Label text="Vampire Valkyrie" textWrap="true" /> 
+            </StackLayout>
+            <Label text="$21.99" class="price" />
+        </StackLayout>            
+    </GridLayout>
+</Page>

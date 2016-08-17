@@ -1,0 +1,56 @@
+﻿.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 20;
+}
+.sub-title {
+    font-size: 20;
+}
+
+button {
+    horizontal-align: center;
+}
+
+Label {
+    margin-left: 10;
+    margin-right: 10;
+    margin-bottom: 10;
+}
+
+Page {
+    background-color: #EFEFEF;
+}
+
+.tile {
+    background-color: #FFFFFF;
+    margin: 5;
+}
+
+.tile-title {
+    background-color: #99ccff;
+}
+
+.tile-title Label {
+    font-size: 14;
+    color: black;
+    margin-top: 5;
+}
+
+.price {
+    color: #009933;
+    text-align: right;
+}
+
+.highlight .tile-title {
+    font-weight: bold;
+    background-color: #6699ff;
+}
+
+.highlight .tile-title Label {
+    font-size: 18;
+}
+
+.highlight .price {
+    font-weight: bold;
+    color: red;
+}
