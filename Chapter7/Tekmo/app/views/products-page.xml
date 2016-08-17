@@ -44,6 +44,7 @@
             <StackLayout class="tile-title">
                 <Label text="Vampire Valkyrie" textWrap="true" /> 
             </StackLayout>
+            <Image src="res://vampire-valkyrie" />
             <Label text="$21.99" class="price" />
         </StackLayout>            
     </GridLayout>
