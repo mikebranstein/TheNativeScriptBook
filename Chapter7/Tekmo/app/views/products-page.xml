@@ -4,9 +4,13 @@
             <StackLayout class="tile-title">
                 <Label text="Super Marshmallow Man" textWrap="true" />
             </StackLayout>
-            <Image src="res://super-marshmallow-man" />
-            <Label textWrap="true" text="Escape from certain death in this wild adventure!" />
-            <Label text="$34.99" class="price" />
+            <StackLayout orientation="horizontal">
+                <Image src="res://super-marshmallow-man" />
+                <StackLayout>
+                    <Label textWrap="true" text="Escape from certain death in this wild adventure!" />
+                    <Label text="$34.99" class="price" />
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
         <StackLayout row="1" col="0" class="tile">
             <StackLayout class="tile-title">

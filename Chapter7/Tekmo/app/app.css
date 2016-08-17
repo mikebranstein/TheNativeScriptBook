@@ -41,7 +41,7 @@ Page {
     text-align: right;
 }
 
-/*.highlight .tile-title {
+.highlight .tile-title {
     font-weight: bold;
     background-color: #6699ff;
 }
@@ -53,9 +53,14 @@ Page {
 .highlight .price {
     font-weight: bold;
     color: red;
-}*/
+}
 
-/*Image {
+Image {
     width: 80;
     height: 80;
-}*/
+}
+
+.highlight Image {
+    width: 100;
+    height: 100;
+}
