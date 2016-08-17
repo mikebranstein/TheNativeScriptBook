@@ -23,7 +23,7 @@ Page {
 
 .tile {
     background-color: #FFFFFF;
-    margin: 5;
+    margin: 2;
 }
 
 .tile-title {
@@ -41,7 +41,7 @@ Page {
     text-align: right;
 }
 
-.highlight .tile-title {
+/*.highlight .tile-title {
     font-weight: bold;
     background-color: #6699ff;
 }
@@ -53,4 +53,9 @@ Page {
 .highlight .price {
     font-weight: bold;
     color: red;
-}
+}*/
+
+/*Image {
+    width: 80;
+    height: 80;
+}*/
