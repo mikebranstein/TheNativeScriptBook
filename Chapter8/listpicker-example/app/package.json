@@ -1,0 +1,53 @@
+{
+  "name": "tns-template-blank",
+  "main": "app.js",
+  "version": "2.1.0",
+  "author": {
+    "name": "Telerik",
+    "email": "support@telerik.com"
+  },
+  "description": "Nativescript blank project template",
+  "license": "BSD",
+  "keywords": [
+    "telerik",
+    "mobile",
+    "nativescript",
+    "{N}",
+    "tns",
+    "appbuilder",
+    "template"
+  ],
+  "repository": {
+    "url": "https://github.com/NativeScript/NativeScript/commit/f201465fb38f23772110776168a99aaf8c223ac8"
+  },
+  "_id": "tns-template-blank@2.1.0",
+  "_shasum": "8ba13055bf1c426f126cc8494144695d9ea63e9d",
+  "_resolved": "https://registry.npmjs.org/tns-template-blank/-/tns-template-blank-2.1.0.tgz",
+  "_from": "tns-template-blank@latest",
+  "scripts": {},
+  "_npmVersion": "2.15.5",
+  "_nodeVersion": "4.4.5",
+  "_npmUser": {
+    "name": "enchev",
+    "email": "vladimir.enchev@gmail.com"
+  },
+  "dist": {
+    "shasum": "8ba13055bf1c426f126cc8494144695d9ea63e9d",
+    "tarball": "https://registry.npmjs.org/tns-template-blank/-/tns-template-blank-2.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "enchev",
+      "email": "vladimir.enchev@gmail.com"
+    },
+    {
+      "name": "erjangavalji",
+      "email": "erjan.gavalji@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/tns-template-blank-2.1.0.tgz_1470832788957_0.6280348948203027"
+  },
+  "directories": {}
+}
