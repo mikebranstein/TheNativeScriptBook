@@ -1,5 +1,5 @@
 <Page>
   <StackLayout>
-    <Image src="ns-logo.png" />
+    <Image src="~/ns-logo.png" />
   </StackLayout>
 </Page>
