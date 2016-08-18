@@ -1,11 +1,19 @@
 <Page loaded="onLoaded">
     <StackLayout>
-        <Label text="Title: " />
+        <ListView items="{{ pages }}">
+            <ListView.itemTemplate>
+                <StackLayout>
+                    <Label text="Title: " />
+                    <TextField class="header" text="{{ title }}" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        <!--<Label text="Title: " />
         <TextField class="header" text="{{title}}" />
         <Label text="Age: " />
         <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />
         <Label text="Gender: " />
         <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}" />
-        <Button tap="onTap" text="Done"/>
+        <Button tap="onTap" text="Done"/>-->
     </StackLayout>
 </Page>
