@@ -12,4 +12,6 @@ exports.onLoaded = function(){
 
     console.log("The 'file' is: " + json);
     console.log("The 'theFile' is: " + theFile);
+
+    file.remove();
 };
