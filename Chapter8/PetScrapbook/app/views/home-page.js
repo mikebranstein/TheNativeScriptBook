@@ -12,5 +12,5 @@ exports.onLoaded = function(args) {
 };
 
 exports.onContinueTap = function(args){
-    frame.topmost().navigate("views/scrapbook");
+    frame.topmost().navigate("views/scrapbook-page");
 }
