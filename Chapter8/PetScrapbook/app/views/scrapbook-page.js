@@ -23,11 +23,18 @@ function scrapbookPageModel(){
 
 exports.onLoaded = function(args) {
     var page = args.object;
+    var scrapbook;
     //var file = fileSystem.knownFolders.documents().getFile("scrapbook.json").readTextSync();
     //var emptyScrapbookPage = new scrapbookPageModel();
-    var scrapbook = new observable.Observable({
-        pages: new observableArray.ObservableArray(new scrapbookPageModel())
-    });
+
+    if(page.navigationContext != null) {
+        scrapbook = page.navigationContext.model;
+    }
+    else {
+        scrapbook = new observable.Observable({
+            pages: new observableArray.ObservableArray(new scrapbookPageModel())
+        });
+    } 
 
     // if(file.length !== 0){
     //     var pages = JSON.parse(file);
@@ -90,6 +97,7 @@ exports.onItemTap = function(args) {
     
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        context: { data: scrapbook.pages.getItem(args.index) }
+        context: { model: scrapbook, index: args.index },
+        //bindingContext: scrapbook.pages.getItem(args.index)
     });
 };
