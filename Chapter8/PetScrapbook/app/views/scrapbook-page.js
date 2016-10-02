@@ -1,6 +1,8 @@
 var observable = require("data/observable");
 var observableArray = require("data/observable-array");
-var fileSystem = require("file-system");
+var frame = require("ui/frame");
+
+// var fileSystem = require("file-system");
 
 var counter = 0;
 
@@ -80,6 +82,14 @@ exports.onAddTap = function(args) {
 };
 
 exports.onItemTap = function(args) {
+    var page = args.object;
+    var scrapbook = page.bindingContext;
+
     counter++;
-    console.log('Item ' + args.index + ' was clicked. Counter: ' + counter);
+    console.log('Item ' + args.index + ' with data ' + scrapbook.pages[args.index] + ' was clicked. Counter: ' + counter);
+    
+    frame.topmost().navigate({ 
+        moduleName: "views/scrapbookUpdate-page", 
+        bindingContext: new scrapbookPageModel()
+    });
 };
