@@ -86,10 +86,10 @@ exports.onItemTap = function(args) {
     var scrapbook = page.bindingContext;
 
     counter++;
-    console.log('Item ' + args.index + ' with data ' + scrapbook.pages[args.index] + ' was clicked. Counter: ' + counter);
+    console.log('Item ' + args.index + ' with data ' + scrapbook.pages.getItem(args.index) + ' was clicked. Counter: ' + counter);
     
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        bindingContext: new scrapbookPageModel()
+        context: { data: scrapbook.pages.getItem(args.index) }
     });
 };
