@@ -2,7 +2,6 @@
     <StackLayout>
         <ListView items="{{ pages }}" itemTap="onItemTap">
             <ListView.itemTemplate>
-            <ScrollView>
                 <StackLayout>
                     <Label text="{{ title, title + ' Scrapbook Page' }}" />
                     <!--<TextField class="header" text="{{ title }}" hint="Enter title..."/>
@@ -11,7 +10,6 @@
                     <Label text="Gender: " />
                     <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}" />-->
                 </StackLayout>
-            </ScrollView>
             </ListView.itemTemplate>
         </ListView>
         <Button tap="onAddTap" text="Add"/>

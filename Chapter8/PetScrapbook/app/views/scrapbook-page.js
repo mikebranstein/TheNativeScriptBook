@@ -2,6 +2,8 @@ var observable = require("data/observable");
 var observableArray = require("data/observable-array");
 var fileSystem = require("file-system");
 
+var counter = 0;
+
 function scrapbookPageModel(){
     var model = new observable.Observable();
 
@@ -78,5 +80,6 @@ exports.onAddTap = function(args) {
 };
 
 exports.onItemTap = function(args) {
-    console.log('Item was clicked');
+    counter++;
+    console.log('Item ' + args.index + ' was clicked. Counter: ' + counter);
 };
