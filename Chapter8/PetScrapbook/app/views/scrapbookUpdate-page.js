@@ -13,14 +13,9 @@ exports.onLoaded = function(args) {
 
 exports.onDoneTap = function(args) {    
     var page = args.object;
-    //page.bindingContext = page.navigationContext.data;
-
-    console.log(model.pages.getItem(index).title);
-    console.log(page.bindingContext.title);
-
+    
     frame.topmost().navigate({ 
         moduleName: "views/scrapbook-page", 
-        //context: { model: page.navigationContext }
         context: { model: model }
     });
 };
