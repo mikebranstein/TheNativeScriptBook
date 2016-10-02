@@ -38,6 +38,11 @@ exports.onAddTap = function(args) {
     var scrapbook = page.bindingContext;
     
     scrapbook.pages.push(new scrapbookPageModel());
+
+    frame.topmost().navigate({ 
+        moduleName: "views/scrapbookUpdate-page", 
+        context: { model: scrapbook, index: scrapbook.pages.length - 1 }
+    });
 };
 
 exports.onItemTap = function(args) {
