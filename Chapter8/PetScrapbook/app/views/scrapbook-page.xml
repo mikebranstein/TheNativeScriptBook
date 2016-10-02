@@ -1,0 +1,19 @@
+<Page loaded="onLoaded">
+    <StackLayout>
+        <ListView items="{{ pages }}" rowHeight="300">
+            <ListView.itemTemplate>
+            <ScrollView>
+                <StackLayout>
+                    <Label text="{{ title, title + ' Scrapbook Page' }}" />
+                    <TextField class="header" text="{{ title }}" hint="Enter title..."/>
+                    <Label text="{{ 'Age: ' + calcAge(year, month, day) + ' years old'}} " />
+                    <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />
+                    <Label text="Gender: " />
+                    <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}" />
+                </StackLayout>
+            </ScrollView>
+            </ListView.itemTemplate>
+        </ListView>
+        <Button tap="onTap" text="Done"/>
+    </StackLayout>
+</Page>

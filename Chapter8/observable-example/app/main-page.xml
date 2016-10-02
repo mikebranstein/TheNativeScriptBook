@@ -1,5 +1,5 @@
-<Page>
+<Page loaded="onLoaded">
   <StackLayout>
-    <Label text="Observable Example" class="title"/>
+    <Label id="title" class="title"/>
   </StackLayout>
 </Page>
