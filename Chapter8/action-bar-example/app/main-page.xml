@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <Page.actionBar>
+    <ActionBar title="Action Bar" />
+  </Page.actionBar>
+  <StackLayout>
+    <Label text="Page Content" />
+  </StackLayout>
+</Page>
