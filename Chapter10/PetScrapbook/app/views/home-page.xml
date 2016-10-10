@@ -1,12 +1,12 @@
 <Page loaded="onLoaded">
   <ScrollView>
     <StackLayout>
-        <Label class="header" text="{{title}}" />
+        <Label class="h1" text="{{title}}" />
         <Image src="~/images/home.png"></Image>
-        <Label class="footer" text="{{footer}}" />
+        <Label class="footnote" text="{{footer}}" />
         <StackLayout orientation="horizontal" horizontalAlignment="center" >
-            <Button style="margin-right: 20px;" text="About" />
-            <Button style="margin-left: 20px;" text="Continue" tap="onContinueTap" />
+            <Button class="btn btn-primary btn-rounded-sm btn-active" style="margin-right: 20px;" text="About" />
+            <Button class="btn btn-primary btn-rounded-sm btn-active" style="margin-left: 20px;" text="Continue" tap="onContinueTap" />
         </StackLayout>
     </StackLayout>
   </ScrollView>

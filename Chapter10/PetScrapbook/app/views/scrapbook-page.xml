@@ -5,13 +5,13 @@
                 text="Add" android.position="actionBar"/>
         </ActionBar>
     </Page.actionBar>
-        <StackLayout>
-            <ListView items="{{ pages }}" itemTap="onItemTap">
-                <ListView.itemTemplate>
-                    <StackLayout>
-                        <Label text="{{ title, title + ' Scrapbook Page' }}" />
-                    </StackLayout>
-                </ListView.itemTemplate>
-            </ListView>
-        </StackLayout> 
+    <StackLayout>
+        <ListView items="{{ pages }}" itemTap="onItemTap">
+            <ListView.itemTemplate>
+                <StackLayout>
+                    <Label class="m-t-10 m-b-10 m-x-auto" text="{{ title, title + ' Scrapbook Page' }}" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout> 
 </Page>

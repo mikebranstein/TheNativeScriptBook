@@ -1,11 +1,24 @@
 <Page loaded="onLoaded">
+    <Page.actionBar>
+        <ActionBar title="{{ title, title + ' Page' }}" >
+            <ActionItem tap="onDoneTap" ios.position="right" 
+                text="Done" android.position="actionBar"/>
+        </ActionBar>
+    </Page.actionBar>
     <StackLayout>
-        <Label text="{{ title, title + ' Scrapbook Page' }}" />
-        <TextField class="header" text="{{ title }}" hint="Enter title..."/>
-        <Label text="{{ 'Age: ' + calcAge(year, month, day) + ' years old'}} " />
-        <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />
-        <Label text="Gender: " />
-        <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}" />
-        <Button tap="onDoneTap" text="Done"/>
+        <StackLayout class="form">
+            <StackLayout class="input-field">
+                <Label class="label" text="Name:" />
+                <TextField class="input" text="{{ title }}" hint="Enter name..." />
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label class="label" text="{{ 'Birth date: (' + calcAge(year, month, day) + ' years old)' }}" />
+                <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label class="label" text="Gender:"></Label>
+                <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}" />
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
 </Page>
