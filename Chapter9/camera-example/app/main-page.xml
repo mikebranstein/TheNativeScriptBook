@@ -1,0 +1,6 @@
+<Page loaded="onLoaded">
+  <StackLayout>
+    <Button tap="onTap" text="Take a picture!" />
+    <Image id="myImage" />
+  </StackLayout>
+</Page>
