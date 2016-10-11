@@ -1,0 +1,13 @@
+<Page loaded="onLoaded">
+  <ScrollView>
+    <StackLayout>
+        <Label class="header" text="{{title}}" />
+        <Image src="~/images/home.png"></Image>
+        <Label class="footer" text="{{footer}}" />
+        <StackLayout orientation="horizontal" horizontalAlignment="center" >
+            <Button style="margin-right: 20px;" text="About" />
+            <Button style="margin-left: 20px;" text="Continue" tap="onContinueTap" />
+        </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</Page>
