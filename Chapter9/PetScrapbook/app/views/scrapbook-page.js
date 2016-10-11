@@ -1,9 +1,10 @@
 var observable = require("data/observable");
 var observableArray = require("data/observable-array");
 var frame = require("ui/frame");
+var fileSystem = require("file-system");
 
-function scrapbookPageModel(){
-    var model = new observable.Observable();
+function scrapbookPageModel(id){
+    var model = new observable.Observable({ id: id });
 
     model.genders = ["Female", "Male", "Other"];
     model.calcAge = function(year, month, day){
@@ -19,14 +20,28 @@ function scrapbookPageModel(){
 
 exports.onLoaded = function(args) {
     var page = args.object;
-    var scrapbook;
+    var scrapbook = new observable.Observable({ pages: new observableArray.ObservableArray() });
+    var file = fileSystem.knownFolders.documents().getFile("scrapbook.json").readTextSync();
 
-    if(page.navigationContext != null) {
-        scrapbook = page.navigationContext.model;
+    if (file.length !== 0) {
+        var pages = JSON.parse(file);
+        
+        pages.forEach(function (item) {
+            var model = new scrapbookPageModel();
+            
+            model.id = item.id;
+            model.title = item.title;
+            model.gender = item.gender;
+            model.year = item.year;
+            model.month = item.month;
+            model.day = item.day;
+
+            scrapbook.pages.push(model);
+        });
     }
     else {
         scrapbook = new observable.Observable({
-            pages: new observableArray.ObservableArray(new scrapbookPageModel())
+            pages: new observableArray.ObservableArray()
         });
     } 
 
@@ -36,12 +51,10 @@ exports.onLoaded = function(args) {
 exports.onAddTap = function(args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
-    
-    scrapbook.pages.push(new scrapbookPageModel());
 
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        context: { model: scrapbook, index: scrapbook.pages.length - 1 }
+        context: { model: new scrapbookPageModel(scrapbook.pages.length) }
     });
 };
 
@@ -51,6 +64,6 @@ exports.onItemTap = function(args) {
     
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        context: { model: scrapbook, index: args.index }
+        context: { model: scrapbook.pages.getItem(args.index) }
     });
 };
