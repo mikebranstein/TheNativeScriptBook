@@ -1,6 +1,6 @@
 <Page loaded="onLoaded">
     <Page.actionBar>
-        <ActionBar title="{{ title, title + ' Page' }}" >
+        <ActionBar title="{{ title, (title === null || title === undefined || title === '' ? 'New Page' : title + ' Page') }}" >
             <ActionItem tap="onDoneTap" ios.position="right" 
                 text="Done" android.position="actionBar"/>
         </ActionBar>
@@ -9,7 +9,7 @@
         <StackLayout class="form">
             <StackLayout class="input-field">
                 <Label class="label" text="Name:" />
-                <TextField class="input" text="{{ title }}" hint="Enter name..." />
+                <TextField class="input" text="{{ title }}" hint="Enter a name..." />
             </StackLayout>
             <StackLayout class="input-field">
                 <Label class="label" text="{{ birthDate, 'Birth date: ' + (birthDate === null ? '' : '(' + calcAge(birthDate) + ' years old)') }}" />
