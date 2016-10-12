@@ -9,7 +9,7 @@
         <ListView items="{{ pages }}" itemTap="onItemTap">
             <ListView.itemTemplate>
                 <StackLayout>
-                    <Label class="m-t-10 m-b-10 m-x-auto" text="{{ title, title + ' Scrapbook Page' }}" />
+                    <Label class="m-t-15 m-b-15 m-x-auto" text="{{ title, title + ' Scrapbook Page' }}" />
                 </StackLayout>
             </ListView.itemTemplate>
         </ListView>
