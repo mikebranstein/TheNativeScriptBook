@@ -28,3 +28,11 @@ exports.onGenderTap = function(args) {
         page.bindingContext.set("gender", gender);
     }, fullscreen);
 };
+
+exports.onDoneTap = function(args) {
+    frame.topmost().navigate({ 
+        moduleName: "views/scrapbook-page", 
+        context: { model: scrapbook },
+        clearHistory: true
+    });
+}

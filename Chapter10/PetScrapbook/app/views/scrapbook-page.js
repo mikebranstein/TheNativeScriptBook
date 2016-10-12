@@ -41,7 +41,8 @@ exports.onAddTap = function(args) {
 
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        context: { model: scrapbook, index: scrapbook.pages.length - 1 }
+        context: { model: scrapbook, index: scrapbook.pages.length - 1 },
+        clearHistory: true
     });
 };
 
@@ -51,6 +52,7 @@ exports.onItemTap = function(args) {
     
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        context: { model: scrapbook, index: args.index }
+        context: { model: scrapbook, index: args.index },
+        clearHistory: true
     });
 };
