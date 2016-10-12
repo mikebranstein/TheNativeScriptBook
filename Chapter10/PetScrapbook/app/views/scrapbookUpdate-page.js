@@ -33,6 +33,9 @@ exports.onDoneTap = function(args) {
     frame.topmost().navigate({ 
         moduleName: "views/scrapbook-page", 
         context: { model: scrapbook },
-        clearHistory: true
+        clearHistory: true, 
+        transition: {
+            name: "slideRight"
+        }
     });
 }
