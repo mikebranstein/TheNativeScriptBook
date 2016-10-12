@@ -26,7 +26,7 @@ exports.onLoaded = function(args) {
     }
     else {
         scrapbook = new observable.Observable({
-            pages: new observableArray.ObservableArray(new scrapbookPageModel())
+            pages: new observableArray.ObservableArray()
         });
     } 
 
