@@ -6,13 +6,13 @@ function scrapbookPageModel(){
     var model = new observable.Observable();
 
     model.genders = ["Female", "Male", "Other"];
-    model.calcAge = function(year, month, day){
-            var date = new Date(year, month, day);
+    model.calcAge = function(birthDate){
             var now = Date.now();
-            var diff = Math.abs(now - date) / 1000 / 31536000;
+            var diff = Math.abs(now - birthDate) / 1000 / 31536000;
 
             return diff.toFixed(1);
         };
+    model.birthDate = null;
     
     return model;
 }

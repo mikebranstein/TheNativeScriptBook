@@ -12,8 +12,11 @@
                 <TextField class="input" text="{{ title }}" hint="Enter name..." />
             </StackLayout>
             <StackLayout class="input-field">
-                <Label class="label" text="{{ 'Birth date: (' + calcAge(year, month, day) + ' years old)' }}" />
-                <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />
+                <Label class="label" text="{{ birthDate, 'Birth date: ' + (birthDate === null ? '' : '(' + calcAge(birthDate) + ' years old)') }}" />
+                <TextField class="input" editable="false"
+                    text="{{ birthDate, birthDate | dateConverter(dateFormat) }}" 
+                    tap="onBirthDateTap" hint="Enter a birth date..." />                
+                <!--<DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />-->
             </StackLayout>
             <StackLayout class="input-field">
                 <Label class="label" text="Gender:"></Label>
