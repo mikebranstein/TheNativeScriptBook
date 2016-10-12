@@ -1,7 +1,7 @@
 var observable = require("data/observable");
 var observableArray = require("data/observable-array");
 var frame = require("ui/frame");
-var fileSystem = require("file-system");
+var fileSystemService = require("~/data/fileSystemService");
 
 function scrapbookPageModel(id){
     var model = new observable.Observable({ id: id });
@@ -21,11 +21,9 @@ function scrapbookPageModel(id){
 exports.onLoaded = function(args) {
     var page = args.object;
     var scrapbook = new observable.Observable({ pages: new observableArray.ObservableArray() });
-    var file = fileSystem.knownFolders.documents().getFile("scrapbook.json").readTextSync();
+    var pages = fileSystemService.fileSystemService.getPages();
 
-    if (file.length !== 0) {
-        var pages = JSON.parse(file);
-        
+    if (pages.length !== 0) {
         pages.forEach(function (item) {
             var model = new scrapbookPageModel();
             
