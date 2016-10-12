@@ -14,11 +14,17 @@ exports.onLoaded = function(args) {
 exports.onBirthDateTap = function(args) {
     var modalPageModule = "views/selectDate-page";
     var context = { birthDate: page.bindingContext.birthDate };
-    console.log(JSON.stringify(context));
     var fullscreen = true;
     page.showModal(modalPageModule, context, function closeCallback(birthDate) {
-        console.log(birthDate);
         page.bindingContext.set("birthDate", birthDate);
     }, fullscreen);
 };
 
+exports.onGenderTap = function(args) {
+    var modalPageModule = "views/selectGender-page";
+    var context = { gender: page.bindingContext.gender };
+    var fullscreen = true;
+    page.showModal(modalPageModule, context, function closeCallback(gender) {
+        page.bindingContext.set("gender", gender);
+    }, fullscreen);
+};

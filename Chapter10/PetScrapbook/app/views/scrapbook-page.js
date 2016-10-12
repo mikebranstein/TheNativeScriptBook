@@ -5,14 +5,14 @@ var frame = require("ui/frame");
 function scrapbookPageModel(){
     var model = new observable.Observable();
 
-    model.genders = ["Female", "Male", "Other"];
     model.calcAge = function(birthDate){
-            var now = Date.now();
-            var diff = Math.abs(now - birthDate) / 1000 / 31536000;
+        var now = Date.now();
+        var diff = Math.abs(now - birthDate) / 1000 / 31536000;
 
-            return diff.toFixed(1);
-        };
+        return diff.toFixed(1);
+    };
     model.birthDate = null;
+    model.gender = null;
     
     return model;
 }
