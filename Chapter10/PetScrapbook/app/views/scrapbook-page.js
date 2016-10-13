@@ -1,6 +1,7 @@
 var observable = require("data/observable");
 var observableArray = require("data/observable-array");
 var frame = require("ui/frame");
+var view = require("ui/core/view");
 
 function scrapbookPageModel(){
     var model = new observable.Observable();
@@ -31,6 +32,9 @@ exports.onLoaded = function(args) {
     } 
 
     page.bindingContext = scrapbook;
+
+    var scrapbookList = view.getViewById(page, "scrapbookList");
+    scrapbookList.on("itemTap", onItemTap);
 };
 
 exports.onAddTap = function(args) {
@@ -46,7 +50,7 @@ exports.onAddTap = function(args) {
     });
 };
 
-exports.onItemTap = function(args) {
+function onItemTap (args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
     
@@ -55,4 +59,4 @@ exports.onItemTap = function(args) {
         context: { model: scrapbook, index: args.index },
         clearHistory: true
     });
-};
+}
