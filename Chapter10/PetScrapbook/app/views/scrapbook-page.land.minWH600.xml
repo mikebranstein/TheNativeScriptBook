@@ -1,0 +1,10 @@
+<Page xmlns:sl="views/shared/scrapbook-list/scrapbook-list"
+    loaded="onLoaded">
+    <Page.actionBar>
+        <ActionBar title="Pet Scrapbook" >
+            <ActionItem tap="onAddTap" ios.position="right" 
+                text="Add" android.position="actionBar"/>
+        </ActionBar>
+    </Page.actionBar>
+    <sl:ScrapbookList id="scrapbookList" items="{{ pages }}" />
+</Page>
