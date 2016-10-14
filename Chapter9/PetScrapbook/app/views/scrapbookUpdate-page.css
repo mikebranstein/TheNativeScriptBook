@@ -3,3 +3,7 @@ label {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+datepicker {
+    height: 100px;
+}

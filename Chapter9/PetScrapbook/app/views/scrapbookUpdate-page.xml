@@ -4,8 +4,9 @@
         <TextField class="header" text="{{ title }}" hint="Enter title..."/>
         <Label text="{{ 'Age: ' + calcAge(year, month, day) + ' years old'}} " />
         <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />
-        <Label text="Gender: " />
         <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}" />
+        <Image src="{{ image }}" stretch="none" />
+        <Button tap="onAddImageTap" text="Add Image" /> 
         <Button tap="onDoneTap" text="Done"/>
     </StackLayout>
 </Page>

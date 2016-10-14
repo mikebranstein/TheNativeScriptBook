@@ -33,7 +33,8 @@ exports.onLoaded = function(args) {
             model.year = item.year;
             model.month = item.month;
             model.day = item.day;
-
+            model.image = item.image;
+            
             scrapbook.pages.push(model);
         });
     }
