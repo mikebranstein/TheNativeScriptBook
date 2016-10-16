@@ -6,6 +6,9 @@
         <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />
         <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}" />
         <Image src="{{ image }}" stretch="none" />
+        <StackLayout orientation="horizontal">
+            <Label text="{{ (lat, long), 'Picture taken at ' + lat + ', ' + long }}" />
+        </StackLayout>
         <Button tap="onAddImageTap" text="Add Image" /> 
         <Button tap="onDoneTap" text="Done"/>
     </StackLayout>
