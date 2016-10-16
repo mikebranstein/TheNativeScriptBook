@@ -26,13 +26,13 @@ exports.onAddImageTap = function (args) {
     var page = args.object;
     var scrapbookPage = page.bindingContext;
 
+    if (!geolocation.isEnabled()) {
+        geolocation.enableLocationRequest();
+    }
+
     camera.takePicture({ width: 100, height: 100, keepAspectRatio: true }).then(function (picture) {
         scrapbookPage.set("image", picture);
 
-        if (!geolocation.isEnabled()) {
-            geolocation.enableLocationRequest();
-        }
-    
         geolocation.getCurrentLocation().then(function (location) {
             scrapbookPage.set("lat", location.latitude);
             scrapbookPage.set("long", location.longitude);
