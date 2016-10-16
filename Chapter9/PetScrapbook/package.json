@@ -13,6 +13,7 @@
     }
   },
   "dependencies": {
+    "nativescript-geolocation": "0.0.13",
     "tns-core-modules": "2.3.0"
   },
   "devDependencies": {

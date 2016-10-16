@@ -34,6 +34,8 @@ exports.onLoaded = function(args) {
             model.month = item.month;
             model.day = item.day;
             model.image = item.image;
+            model.lat = item.lat;
+            model.long = item.long;
             
             scrapbook.pages.push(model);
         });

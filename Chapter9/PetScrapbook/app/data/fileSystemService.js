@@ -36,7 +36,9 @@ fileSystemService.prototype.savePage = function (scrapbookPage) {
             year: scrapbookPage.year,
             month: scrapbookPage.month,
             day: scrapbookPage.day,
-            imageBase64: scrapbookPage.image != null ? scrapbookPage.image.toBase64String("png") : null
+            imageBase64: scrapbookPage.image != null ? scrapbookPage.image.toBase64String("png") : null,
+            lat: scrapbookPage.lat,
+            long: scrapbookPage.long
         };
     }
     else {
@@ -47,7 +49,9 @@ fileSystemService.prototype.savePage = function (scrapbookPage) {
             year: scrapbookPage.year,
             month: scrapbookPage.month,
             day: scrapbookPage.day,
-            imageBase64: scrapbookPage.image != null ? scrapbookPage.image.toBase64String("png") : null
+            imageBase64: scrapbookPage.image != null ? scrapbookPage.image.toBase64String("png") : null,
+            lat: scrapbookPage.lat,
+            long: scrapbookPage.long
         });
     }
 
