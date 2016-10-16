@@ -25,7 +25,7 @@ exports.onTap_ContactUs = onTap_ContactUs;
 function onTap_Products() {
     var navigationEntry = {
         moduleName: "views/products-page",
-        clearHistory: true,
+        // clearHistory: true,
         transition: {
             name: "slideBottom"
         }
