@@ -1,4 +1,6 @@
-<Page xmlns:sl="views/shared/scrapbook-list/scrapbook-list"
+<Page 
+    xmlns:sl="views/shared/scrapbook-list/scrapbook-list" 
+    xmlns:detail="views/shared/scrapbook-detail/scrapbook-detail"
     loaded="onLoaded">
     <Page.actionBar>
         <ActionBar title="Pet Scrapbook" >
@@ -6,5 +8,13 @@
                 text="Add" android.position="actionBar"/>
         </ActionBar>
     </Page.actionBar>
-    <sl:ScrapbookList id="scrapbookList" items="{{ pages }}" />
+    <GridLayout rows="*" columns="*,2*">
+        <sl:ScrapbookList id="scrapbookList" items="{{ pages }}" />
+        <GridLayout rows="*" columns="*" col="1">
+            <StackLayout>
+                <Label class="h1 m-x-auto" text="Detail page" />
+                <detail:ScrapbookDetail item="{{ selectedPage }}" />
+            </StackLayout>
+        </GridLayout>
+    </GridLayout>
 </Page>

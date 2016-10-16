@@ -3,7 +3,7 @@ application.cssFile = "./app.css";
 
 
 var dateConverter = function(value, format) {
-    if (value === null) return '';
+    if (value === null || value === undefined || value === '') return '';
 
     var result = format;
     var day = value.getDate();
