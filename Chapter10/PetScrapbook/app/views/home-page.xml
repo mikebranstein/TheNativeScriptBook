@@ -5,8 +5,8 @@
         <Image src="~/images/home.png"></Image>
         <Label class="footnote text-center m-y-10" text="{{footer}}" />
         <StackLayout orientation="horizontal" horizontalAlignment="center" >
-            <Button class="btn btn-primary btn-rounded-sm btn-active" style="margin-right: 20px;" text="About" />
-            <Button class="btn btn-primary btn-rounded-sm btn-active" style="margin-left: 20px;" text="Continue" tap="onContinueTap" />
+            <Button class="btn btn-primary btn-rounded-sm btn-active m-r-20" text="About" />
+            <Button class="btn btn-primary btn-rounded-sm btn-active m-l-20" text="Continue" tap="onContinueTap" />
         </StackLayout>
     </StackLayout>
   </ScrollView>
