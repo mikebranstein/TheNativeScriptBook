@@ -23,6 +23,12 @@
                     text="{{ gender }}" 
                     tap="onGenderTap" hint="Select a gender..." />
             </StackLayout>
+            <StackLayout class="input-field">
+                <Label class="label" text="Image:" />
+                <Image src="{{ image }}" stretch="None" />
+                <Label class="footnote" text="{{ (lat, long), (lat === undefined || long === undefined) ? '' : 'Picture taken at ' + lat + ', ' + long }}" />
+            </StackLayout>
         </StackLayout>
+        <Button class="btn btn-primary btn-rounded-sm btn-active" tap="onAddImageTap" text="Add Image" /> 
     </StackLayout>
 </Page>

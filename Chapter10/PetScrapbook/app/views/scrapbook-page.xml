@@ -8,7 +8,8 @@
     <GridLayout rows="*" columns="*">
         <ListView class="list-group" items="{{ pages }}" itemTap="onItemTap">
             <ListView.itemTemplate>
-                <StackLayout class="list-group-item">
+                <StackLayout orientation="horizontal" class="list-group-item">
+                    <Image src="{{ image }}" />
                     <Label class="m-x-auto" text="{{ title, (title === null || title === undefined ? 'New' : title) + ' Scrapbook Page' }}" />
                 </StackLayout>
             </ListView.itemTemplate>

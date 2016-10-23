@@ -1,14 +1,16 @@
 var observable = require("data/observable");
 var frame = require("ui/frame");
-var scrapbook;
+var fileSystemService = require("~/data/fileSystemService");
+var camera = require("camera");
+var geolocation = require("nativescript-geolocation");
+
 var page;
 
 exports.onLoaded = function(args) {
     page = args.object;
-    var index = page.navigationContext.index;
-    scrapbook = page.navigationContext.model
+    var scrapbookPage = page.navigationContext.model;
 
-    page.bindingContext = scrapbook.pages.getItem(index);
+    page.bindingContext = scrapbookPage;
 };
 
 exports.onBirthDateTap = function(args) {
@@ -29,13 +31,37 @@ exports.onGenderTap = function(args) {
     }, fullscreen);
 };
 
-exports.onDoneTap = function(args) {
+exports.onDoneTap = function(args) {    
+    var scrapbookPage = page.bindingContext;
+    
+    fileSystemService.fileSystemService.savePage(scrapbookPage);
+
     frame.topmost().navigate({ 
-        moduleName: "views/scrapbook-page", 
-        context: { model: scrapbook },
-        clearHistory: true, 
+        moduleName: "views/scrapbook-page",
+        clearHistory: true,
         transition: {
             name: "slideRight"
         }
     });
-}
+};
+
+exports.onAddImageTap = function (args) {
+    var scrapbookPage = page.bindingContext;
+
+    if (!geolocation.isEnabled()) {
+        geolocation.enableLocationRequest();
+    }
+
+    camera
+        .takePicture({ width: 100, height: 100, keepAspectRatio: true })
+        .then(function (picture) {
+            scrapbookPage.set("image", picture);
+
+            geolocation
+                .getCurrentLocation()
+                .then(function (location) {
+                    scrapbookPage.set("lat", location.latitude);
+                    scrapbookPage.set("long", location.longitude);
+                });
+        });
+};

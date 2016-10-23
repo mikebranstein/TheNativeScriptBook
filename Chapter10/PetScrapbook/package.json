@@ -13,6 +13,7 @@
     }
   },
   "dependencies": {
+    "nativescript-geolocation": "0.0.13",
     "nativescript-theme-core": "^0.1.3",
     "tns-core-modules": "2.3.0"
   },

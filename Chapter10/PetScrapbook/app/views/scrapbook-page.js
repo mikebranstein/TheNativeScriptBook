@@ -2,6 +2,7 @@ var observable = require("data/observable");
 var observableArray = require("data/observable-array");
 var frame = require("ui/frame");
 var view = require("ui/core/view");
+var fileSystemService = require("~/data/fileSystemService");
 
 function scrapbookPageModel(){
     var model = new observable.Observable();
@@ -20,10 +21,23 @@ function scrapbookPageModel(){
 
 exports.onLoaded = function(args) {
     var page = args.object;
-    var scrapbook;
+    var scrapbook = new observable.Observable({ pages: new observableArray.ObservableArray() });
+    var pages = fileSystemService.fileSystemService.getPages();
 
-    if(page.navigationContext != null) {
-        scrapbook = page.navigationContext.model;
+    if (pages.length !== 0) {
+        pages.forEach(function (item) {
+            var model = new scrapbookPageModel();
+            
+            model.id = item.id;
+            model.title = item.title;
+            model.gender = item.gender;
+            model.birthDate = item.birthDate;
+            model.image = item.image;
+            model.lat = item.lat;
+            model.long = item.long;
+            
+            scrapbook.pages.push(model);
+        });
     }
     else {
         scrapbook = new observable.Observable({
@@ -32,31 +46,26 @@ exports.onLoaded = function(args) {
     } 
 
     page.bindingContext = scrapbook;
-
-    var scrapbookList = view.getViewById(page, "scrapbookList");
-    scrapbookList.on("itemTap", onItemTap);
 };
 
 exports.onAddTap = function(args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
     
-    scrapbook.pages.push(new scrapbookPageModel());
-
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        context: { model: scrapbook, index: scrapbook.pages.length - 1 },
+        context: { model: new scrapbookPageModel(scrapbook.pages.length) },
         clearHistory: true
     });
 };
 
-function onItemTap (args) {
+exports.onItemTap = function(args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
     
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        context: { model: scrapbook, index: args.index },
+        context: { model: scrapbook.pages.getItem(args.index) },
         clearHistory: true
     });
 }
