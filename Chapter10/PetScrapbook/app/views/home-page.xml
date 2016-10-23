@@ -1,9 +1,9 @@
 <Page loaded="onLoaded">
   <ScrollView>
     <StackLayout>
-        <Label class="h1" text="{{title}}" />
+        <Label class="h1 text-center m-y-10" text="{{title}}" />
         <Image src="~/images/home.png"></Image>
-        <Label class="footnote" text="{{footer}}" />
+        <Label class="footnote text-center m-y-10" text="{{footer}}" />
         <StackLayout orientation="horizontal" horizontalAlignment="center" >
             <Button class="btn btn-primary btn-rounded-sm btn-active" style="margin-right: 20px;" text="About" />
             <Button class="btn btn-primary btn-rounded-sm btn-active" style="margin-left: 20px;" text="Continue" tap="onContinueTap" />
