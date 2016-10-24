@@ -9,8 +9,8 @@
         <ListView class="list-group" items="{{ pages }}" itemTap="onItemTap">
             <ListView.itemTemplate>
                 <StackLayout orientation="horizontal" class="list-group-item">
-                    <Image src="{{ image }}" />
-                    <Label class="m-x-auto" text="{{ title, (title === null || title === undefined ? 'New' : title) + ' Scrapbook Page' }}" />
+                    <Image class="thumb" src="{{ image }}" />
+                    <Label class="m-x-auto" text="{{ title, (title === null || title === undefined ? 'New' : title + '\'s') + ' Scrapbook Page' }}" />
                 </StackLayout>
             </ListView.itemTemplate>
         </ListView>

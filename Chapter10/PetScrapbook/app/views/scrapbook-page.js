@@ -4,8 +4,8 @@ var frame = require("ui/frame");
 var view = require("ui/core/view");
 var fileSystemService = require("~/data/fileSystemService");
 
-function scrapbookPageModel(){
-    var model = new observable.Observable();
+function scrapbookPageModel(id){
+    var model = new observable.Observable({ id: id});
 
     model.calcAge = function(birthDate){
         var now = Date.now();
