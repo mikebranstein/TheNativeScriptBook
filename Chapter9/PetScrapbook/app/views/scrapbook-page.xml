@@ -5,7 +5,7 @@
                 text="Add" android.position="actionBar"/>
         </ActionBar>
     </Page.actionBar>
-        <StackLayout>
+        <GridLayout rows="*" columns="*">
             <ListView items="{{ pages }}" itemTap="onItemTap">
                 <ListView.itemTemplate>
                     <StackLayout orientation="horizontal">
@@ -14,5 +14,5 @@
                     </StackLayout>
                 </ListView.itemTemplate>
             </ListView>
-        </StackLayout> 
+        </GridLayout> 
 </Page>
