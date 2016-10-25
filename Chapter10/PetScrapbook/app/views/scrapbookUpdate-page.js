@@ -57,13 +57,11 @@ exports.onAddImageTap = function (args) {
         .then(function (picture) {
             scrapbookPage.set("image", picture);
 
-            scrapbookPage.set("lat", 15.2);
-            scrapbookPage.set("long", 15.2);
-            // geolocation
-            //     .getCurrentLocation()
-            //     .then(function (location) {
-            //         scrapbookPage.set("lat", location.latitude);
-            //         scrapbookPage.set("long", location.longitude);
-            //     });
+            geolocation
+                .getCurrentLocation()
+                .then(function (location) {
+                    scrapbookPage.set("lat", location.latitude);
+                    scrapbookPage.set("long", location.longitude);
+                });
         });
 };
