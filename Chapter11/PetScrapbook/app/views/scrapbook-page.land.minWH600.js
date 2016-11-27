@@ -12,7 +12,8 @@ function scrapbookPageModel(){
         gender: null, 
         image: null,
         lat: null,
-        long: null
+        long: null,
+        isActive: false
     });
 
     model.calcAge = function(birthDate){
@@ -70,6 +71,13 @@ exports.onAddTap = function(args) {
 function onItemTap (args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
+
+    scrapbook.pages.forEach(function (item) {
+        item.set("isActive", false);
+    });
+
     scrapbook.set("selectedPage", scrapbook.pages.getItem(args.index));
+    scrapbook.selectedPage.set("isActive", true);
+
     console.log(JSON.stringify(scrapbook.selectedPage));
 }

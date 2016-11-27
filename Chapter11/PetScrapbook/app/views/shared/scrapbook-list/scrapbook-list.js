@@ -26,7 +26,7 @@ var ScrapbookList = (function (_super) {
 
         var listView = new ListView();
         listView.cssClass = "list-group";
-        listView.itemTemplate = '<StackLayout orientation="horizontal" class="list-group-item"><Image class="thumb img-circle" src="{{ image }}" /><Label class="list-group-item-text" style="width: 100%" textWrap="true" text="{{ title, (title === null || title === undefined ? \'New\' : title + \'\\\'s\') + \' Scrapbook Page\' }}" /></StackLayout>';
+        listView.itemTemplate = '<StackLayout orientation="horizontal" class="{{ isActive ? \'list-group-item active\' : \'list-group-item\' }}"><Image class="thumb img-circle" src="{{ image }}" /><Label class="list-group-item-text" style="width: 100%" textWrap="true" text="{{ title, (title === null || title === undefined ? \'New\' : title + \'\\\'s\') + \' Scrapbook Page\' }}" /></StackLayout>';
         listView.on(ListView.itemTapEvent, function(args) {
             onItemTap(this, args.index);
         }.bind(listView)); 
