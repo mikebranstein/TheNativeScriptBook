@@ -58,9 +58,6 @@ exports.onLoaded = function(args) {
             scrapbook.selectedPage.set("gender", gender);
         }, fullscreen);
     });
-    scrapbookDetail.on("addImageTap", function() {
-        console.log("Add Image button tapped event seen.");
-    });
 };
 
 exports.onAddTap = function(args) {
