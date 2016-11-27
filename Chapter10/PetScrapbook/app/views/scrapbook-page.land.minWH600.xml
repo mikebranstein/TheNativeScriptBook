@@ -13,7 +13,7 @@
         <GridLayout rows="*" columns="*" col="1">
             <StackLayout>
                 <Label class="h1 m-x-auto" text="Detail page" />
-                <detail:ScrapbookDetail item="{{ selectedPage }}" />
+                <detail:ScrapbookDetail id="scrapbookDetail" item="{{ selectedPage }}" />
             </StackLayout>
         </GridLayout>
     </GridLayout>
