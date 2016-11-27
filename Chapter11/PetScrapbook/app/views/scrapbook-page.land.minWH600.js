@@ -7,7 +7,7 @@ var scrapbook;
 
 function scrapbookPageModel(){
     var model = new observable.Observable({ 
-        title: "null", 
+        title: null, 
         birthDate: null, 
         gender: null, 
         image: null,
@@ -76,7 +76,3 @@ function onItemTap (args) {
     scrapbook.set("selectedPage", scrapbook.pages.getItem(args.index));
     console.log(JSON.stringify(scrapbook.selectedPage));
 }
-
-exports.test = function (args) {
-    console.log("testing...");
-};
