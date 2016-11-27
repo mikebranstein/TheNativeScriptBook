@@ -1,0 +1,6 @@
+<Page shownModally="onShownModally" loaded="onLoaded">
+    <StackLayout>
+        <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}" />
+        <Button class="btn btn-primary btn-rounded-sm btn-active" text="Done" tap="onDoneTap" />
+    </StackLayout>
+</Page>
