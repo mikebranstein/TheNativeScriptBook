@@ -21,7 +21,7 @@ function scrapbookPageModel(){
 
         return diff.toFixed(1);
     };
-    
+
     return model;
 }
 
