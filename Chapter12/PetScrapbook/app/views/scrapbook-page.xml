@@ -1,0 +1,18 @@
+<Page loaded="onLoaded">
+    <Page.actionBar>
+        <ActionBar title="Pet Scrapbook" >
+            <ActionItem tap="onAddTap" ios.position="right" 
+                text="Add" android.position="actionBar"/>
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*" columns="*">
+        <ListView class="list-group" items="{{ pages }}" itemTap="onItemTap">
+            <ListView.itemTemplate>
+                <StackLayout orientation="horizontal" class="list-group-item">
+                    <Image class="thumb img-circle" src="{{ image }}" />
+                    <Label class="list-group-item-text" text="{{ title, (title === null || title === undefined ? 'New' : title + '\'s') + ' Scrapbook Page' }}" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout> 
+</Page>
