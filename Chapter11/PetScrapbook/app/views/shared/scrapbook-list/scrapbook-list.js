@@ -1,6 +1,8 @@
 var GridLayout = require("ui/layouts/grid-layout").GridLayout;
 var Label = require("ui/label").Label;
 var ListView = require("ui/list-view").ListView;
+var StackLayout = require("ui/layouts/stack-layout").StackLayout;
+var Image = require("ui/image").Image;
  
 var ScrapbookList = (function (_super) {
     global.__extends(ScrapbookList, _super);
@@ -26,7 +28,37 @@ var ScrapbookList = (function (_super) {
 
         var listView = new ListView();
         listView.cssClass = "list-group";
-        listView.itemTemplate = '<StackLayout orientation="horizontal" class="{{ isActive ? \'list-group-item active\' : \'list-group-item\' }}"><Image class="thumb img-circle" src="{{ image }}" /><Label class="list-group-item-text" style="width: 100%" textWrap="true" text="{{ title, (title === null || title === undefined ? \'New\' : title + \'\\\'s\') + \' Scrapbook Page\' }}" /></StackLayout>';
+        listView.itemTemplate = function() {
+            var stackLayout = new StackLayout();
+            stackLayout.orientation = "horizontal";
+            stackLayout.bind({
+                targetProperty: "className",
+                sourceProperty: "$value",
+                expression: "isActive ? 'list-group-item active' : 'list-group-item'"
+            });
+
+            var image = new Image();
+            image.className = "thumb img-circle";
+            image.bind({
+                targetProperty: "src",
+                sourceProperty: "image"
+            });
+            stackLayout.addChild(image);
+
+            var label = new Label();
+            label.className = "list-group-item-text";
+            label.style.width = "100%";
+            label.textWrap = true;
+            label.bind({
+                targetProperty: "text",
+                sourceProperty: "title",
+                expression: "(title === null || title === undefined ? 'New' : title + '\\\'s') + ' Scrapbook Page'"
+            });
+            stackLayout.addChild(label);
+
+            return stackLayout;
+        };
+
         listView.on(ListView.itemTapEvent, function(args) {
             onItemTap(this, args.index);
         }.bind(listView)); 
