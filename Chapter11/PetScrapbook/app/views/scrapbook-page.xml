@@ -7,5 +7,5 @@
                 text="Add" android.position="actionBar"/>
         </ActionBar>
     </Page.actionBar>
-    <shared:ScrapbookList id="scrapbookList" items="{{ pages }}" />
+    <shared:ScrapbookList id="scrapbookList" items="{{ pages }}" itemTap="onItemTap" />
 </Page>

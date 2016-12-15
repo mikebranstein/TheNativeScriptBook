@@ -21,10 +21,6 @@ function scrapbookPageModel(id){
 
 exports.onLoaded = function(args) {
     var page = args.object;
-
-    var scrapbookList = view.getViewById(page, "scrapbookList");
-    scrapbookList.on("itemTap", onItemTap);
-
     var scrapbook = new observable.Observable({ pages: new observableArray.ObservableArray() });
     var pages = fileSystemService.fileSystemService.getPages();
 
@@ -63,7 +59,7 @@ exports.onAddTap = function(args) {
     });
 };
 
-function onItemTap(args) {
+exports.onItemTap = function (args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
     
