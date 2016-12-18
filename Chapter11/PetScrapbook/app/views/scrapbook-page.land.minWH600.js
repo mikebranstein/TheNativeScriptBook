@@ -34,10 +34,6 @@ exports.onLoaded = function(args) {
     });
 
     page.bindingContext = scrapbook;
-
-    var scrapbookList = view.getViewById(page, "scrapbookList");
-    scrapbookList.on("itemTap", onItemTap);
-
     var scrapbookDetail = view.getViewById(page, "scrapbookDetail");
     scrapbookDetail.on("birthDateTap", function() {
         console.log("birth date tap");
@@ -68,7 +64,7 @@ exports.onAddTap = function(args) {
     scrapbook.pages.push(new scrapbookPageModel());
 };
 
-function onItemTap (args) {
+exports.onItemTap = function(args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
 
@@ -78,6 +74,4 @@ function onItemTap (args) {
 
     scrapbook.set("selectedPage", scrapbook.pages.getItem(args.index));
     scrapbook.selectedPage.set("isActive", true);
-
-    console.log(JSON.stringify(scrapbook.selectedPage));
 }

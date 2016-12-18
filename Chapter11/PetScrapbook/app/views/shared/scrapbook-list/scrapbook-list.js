@@ -85,5 +85,6 @@ var ScrapbookList = (function (_super) {
     return ScrapbookList;
  
 })(GridLayout);
- 
+ScrapbookList.itemTapEvent = "itemTap";
+
 exports.ScrapbookList = ScrapbookList;
