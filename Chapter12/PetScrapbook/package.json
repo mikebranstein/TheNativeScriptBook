@@ -16,7 +16,8 @@
     "nativescript-camera": "0.0.8",
     "nativescript-geolocation": "0.0.13",
     "nativescript-theme-core": "^0.1.5",
-    "tns-core-modules": "^2.4.2"
+    "tns-core-modules": "^2.4.2",
+    "tns-core-modules-snapshot": "2.4.2-5.2.361"
   },
   "devDependencies": {
     "babel-traverse": "6.20.0",
