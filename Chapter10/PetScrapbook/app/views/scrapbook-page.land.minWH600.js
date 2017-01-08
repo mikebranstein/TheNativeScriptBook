@@ -32,6 +32,24 @@ exports.onLoaded = function(args) {
         selectedPage: null
     });
 
+    var pages = fileSystemService.fileSystemService.getPages();
+
+    if (pages.length !== 0) {
+        pages.forEach(function (item) {
+            var model = new scrapbookPageModel();
+            
+            model.id = item.id;
+            model.title = item.title;
+            model.gender = item.gender;
+            model.birthDate = item.birthDate;
+            model.image = item.image;
+            model.lat = item.lat;
+            model.long = item.long;
+            
+            scrapbook.pages.push(model);
+        });
+    }
+
     page.bindingContext = scrapbook;
 };
 
