@@ -1,6 +1,4 @@
 <Page 
-    xmlns:sl="views/shared/scrapbook-list/scrapbook-list" 
-    xmlns:detail="views/shared/scrapbook-detail/scrapbook-detail"
     loaded="onLoaded">
     <Page.actionBar>
         <ActionBar title="Pet Scrapbook" >
@@ -9,11 +7,20 @@
         </ActionBar>
     </Page.actionBar>
     <GridLayout rows="*" columns="*,2*">
-        <sl:ScrapbookList id="scrapbookList" items="{{ pages }}" />
+        <GridLayout rows="*" columns="*">
+            <ListView class="list-group" items="{{ pages }}" itemTap="onItemTap">
+                <ListView.itemTemplate>
+                    <StackLayout orientation="horizontal" class="list-group-item">
+                        <Image class="thumb img-circle" src="{{ image }}" />
+                        <Label class="list-group-item-text" text="{{ title, (title === null || title === undefined ? 'New' : title + '\'s') + ' Scrapbook Page' }}" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </GridLayout>
+
         <GridLayout rows="*" columns="*" col="1">
             <StackLayout>
-                <Label class="h1 m-x-auto" text="Detail page" />
-                <detail:ScrapbookDetail id="scrapbookDetail" item="{{ selectedPage }}" />
+
             </StackLayout>
         </GridLayout>
     </GridLayout>
