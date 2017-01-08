@@ -2,6 +2,7 @@ var observable = require("data/observable");
 var observableArray = require("data/observable-array");
 var frame = require("ui/frame");
 var view = require("ui/core/view");
+var fileSystemService = require("~/data/fileSystemService");
 
 var scrapbook;
 
