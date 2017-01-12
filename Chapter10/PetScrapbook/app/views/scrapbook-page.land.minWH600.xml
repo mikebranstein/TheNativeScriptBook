@@ -20,7 +20,30 @@
 
         <GridLayout rows="*" columns="*" col="1">
             <StackLayout>
-
+        <StackLayout id="temp" class="form">
+            <StackLayout class="input-field">
+                <Label class="label" text="Name:" />
+                <TextField class="input" text="{{ title }}" hint="Enter a name..." />
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label class="label" text="{{ birthDate, 'Birth date: ' + (birthDate === null ? '' : '(' + calcAge(birthDate) + ' years old)') }}" />
+                <TextField class="input" editable="false"
+                    text="{{ birthDate, birthDate | dateConverter(dateFormat) }}" 
+                    tap="onBirthDateTap" hint="Enter a birth date..." />                
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label class="label" text="Gender:"></Label>
+                <TextField class="input" editable="false"
+                    text="{{ gender }}" 
+                    tap="onGenderTap" hint="Select a gender..." />
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label class="label" text="Image:" />
+                <Image src="{{ image }}" stretch="None" />
+                <Label class="footnote" text="{{ (lat, long), (lat === undefined || long === undefined) ? '' : 'Picture taken at ' + lat + ', ' + long }}" />
+            </StackLayout>
+        </StackLayout>
+        <Button class="btn btn-primary btn-rounded-sm btn-active" tap="onAddImageTap" text="Add Image" /> 
             </StackLayout>
         </GridLayout>
     </GridLayout>
