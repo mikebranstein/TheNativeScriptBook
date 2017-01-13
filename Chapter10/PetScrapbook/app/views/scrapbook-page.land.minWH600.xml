@@ -10,40 +10,46 @@
         <GridLayout rows="*" columns="*">
             <ListView class="list-group" items="{{ pages }}" itemTap="onItemTap">
                 <ListView.itemTemplate>
-                    <StackLayout orientation="horizontal" class="list-group-item">
+                    <StackLayout orientation="horizontal" class="{{ isActive ? 'list-group-item active' : 'list-group-item' }}">
                         <Image class="thumb img-circle" src="{{ image }}" />
-                        <Label class="list-group-item-text" text="{{ title, (title === null || title === undefined ? 'New' : title + '\'s') + ' Scrapbook Page' }}" />
+                        <Label class="list-group-item-text" text="{{ title, (title === null || title === undefined ? 'New' : title + '\'s') + ' Scrapbook Page' }}"
+                            style="width: 100%" />
                     </StackLayout>
                 </ListView.itemTemplate>
             </ListView>
         </GridLayout>
 
-        <GridLayout rows="*" columns="*" col="1">
-            <StackLayout>
-        <StackLayout id="temp" class="form">
-            <StackLayout class="input-field">
-                <Label class="label" text="Name:" />
-                <TextField class="input" text="{{ title }}" hint="Enter a name..." />
-            </StackLayout>
-            <StackLayout class="input-field">
-                <Label class="label" text="{{ birthDate, 'Birth date: ' + (birthDate === null ? '' : '(' + calcAge(birthDate) + ' years old)') }}" />
-                <TextField class="input" editable="false"
-                    text="{{ birthDate, birthDate | dateConverter(dateFormat) }}" 
-                    tap="onBirthDateTap" hint="Enter a birth date..." />                
-            </StackLayout>
-            <StackLayout class="input-field">
-                <Label class="label" text="Gender:"></Label>
-                <TextField class="input" editable="false"
-                    text="{{ gender }}" 
-                    tap="onGenderTap" hint="Select a gender..." />
-            </StackLayout>
-            <StackLayout class="input-field">
-                <Label class="label" text="Image:" />
-                <Image src="{{ image }}" stretch="None" />
-                <Label class="footnote" text="{{ (lat, long), (lat === undefined || long === undefined) ? '' : 'Picture taken at ' + lat + ', ' + long }}" />
-            </StackLayout>
-        </StackLayout>
-        <Button class="btn btn-primary btn-rounded-sm btn-active" tap="onAddImageTap" text="Add Image" /> 
+        <GridLayout rows="*" columns="*" 
+            col="1" visibility="{{ selectedPage === null ? 'collapsed' : 'visible' }}">
+            <StackLayout id="updateStackLayout" >
+                <StackLayout class="form">
+                    <StackLayout class="input-field">
+                        <Label class="label" text="Name:" />
+                        <TextField class="input" text="{{ title }}" hint="Enter a name..." />
+                    </StackLayout>
+                    <StackLayout class="input-field">
+                        <Label class="label" text="{{ birthDate, 'Birth date: ' + (birthDate === null ? '' : '(' + calcAge(birthDate) + ' years old)') }}" />
+                        <TextField class="input" editable="false"
+                            text="{{ birthDate, birthDate | dateConverter(dateFormat) }}" 
+                            tap="onBirthDateTap" hint="Enter a birth date..." />                
+                    </StackLayout>
+                    <StackLayout class="input-field">
+                        <Label class="label" text="Gender:"></Label>
+                        <TextField class="input" editable="false"
+                            text="{{ gender }}" 
+                            tap="onGenderTap" hint="Select a gender..." />
+                    </StackLayout>
+                    <StackLayout class="input-field">
+                        <Label class="label" text="Image:" />
+                        <Image src="{{ image }}" stretch="None" />
+                        <Label class="footnote" text="{{ (lat, long), (lat === undefined || long === undefined) ? '' : 'Picture taken at ' + lat + ', ' + long }}" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout orientation="horizontal">
+                    <Button class="btn btn-primary btn-rounded-sm btn-active" tap="onAddImageTap" text="Add Image" /> 
+                    <Button class="btn btn-primary btn-rounded-sm btn-active" tap="onDoneTap" text="Done" /> 
+                </StackLayout>
+                
             </StackLayout>
         </GridLayout>
     </GridLayout>

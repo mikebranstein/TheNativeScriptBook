@@ -9,6 +9,7 @@ var geolocation = require("nativescript-geolocation");
 
 var scrapbook;
 var page;
+var updateStackLayout;
 
 function scrapbookPageModel(){
     var model = new observable.Observable({ 
@@ -17,7 +18,8 @@ function scrapbookPageModel(){
         gender: null, 
         image: null,
         lat: null,
-        long: null
+        long: null,
+        isActive: false
     });
 
     model.calcAge = function(birthDate){
@@ -32,16 +34,11 @@ function scrapbookPageModel(){
 
 exports.onLoaded = function(args) {
     page = args.object;
+    updateStackLayout = view.getViewById(page, "updateStackLayout");
     
     var scrapbook = new observable.Observable({
         pages: new observableArray.ObservableArray(),
-        selectedPage: null,
-        calcAge: function(birthDate){
-            var now = Date.now();
-            var diff = Math.abs(now - birthDate) / 1000 / 31536000;
-
-            return diff.toFixed(1);
-        }
+        selectedPage: null
     });
 
     var pages = fileSystemService.fileSystemService.getPages();
@@ -57,15 +54,13 @@ exports.onLoaded = function(args) {
             model.image = item.image;
             model.lat = item.lat;
             model.long = item.long;
+            model.isActive = item.isActive;
             
             scrapbook.pages.push(model);
         });
     }
 
     page.bindingContext = scrapbook;
-    var stackLayout = view.getViewById(page, "temp");
-    stackLayout.bindingContext = scrapbook.selectedPage;
-    console.log("done");
 };
 
 exports.onAddTap = function(args) {
@@ -83,8 +78,9 @@ exports.onItemTap = function(args) {
     });
 
     scrapbook.set("selectedPage", scrapbook.pages.getItem(args.index));
+    updateStackLayout.bindingContext = scrapbook.selectedPage;
+    
     scrapbook.selectedPage.set("isActive", true);
-    console.log(JSON.stringify(scrapbook.selectedPage));
 }
 
 exports.onBirthDateTap = function(args) {
@@ -107,21 +103,17 @@ exports.onGenderTap = function(args) {
 };
 
 exports.onDoneTap = function(args) {    
-    var scrapbookPage = page.bindingContext;
+    var scrapbook = page.bindingContext;
     
-    fileSystemService.fileSystemService.savePage(scrapbookPage);
+    fileSystemService.fileSystemService.savePage(scrapbook.selectedPage);
 
-    frame.topmost().navigate({ 
-        moduleName: "views/scrapbook-page",
-        clearHistory: true,
-        transition: {
-            name: "slideRight"
-        }
-    });
+    scrapbook.selectedPage.set("isActive", false);
+    scrapbook.set("selectedPage", null);
+    updateStackLayout.bindingContext = scrapbook.selectedPage;
 };
 
 exports.onAddImageTap = function (args) {
-    var scrapbookPage = page.bindingContext;
+    var scrapbookPage = updateStackLayout.bindingContext;
 
     if (!geolocation.isEnabled()) {
         geolocation.enableLocationRequest();
