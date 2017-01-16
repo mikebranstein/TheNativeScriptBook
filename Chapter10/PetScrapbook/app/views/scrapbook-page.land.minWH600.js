@@ -64,41 +64,49 @@ exports.onLoaded = function(args) {
 };
 
 exports.onAddTap = function(args) {
-    var page = args.object;
     var scrapbook = page.bindingContext;
     
     scrapbook.pages.push(new scrapbookPageModel());
+
+    scrapbook.set("selectedPage", scrapbook.pages.getItem(scrapbook.pages.length - 1));
+    resetActivePage();
 };
 
-exports.onItemTap = function(args) {
+function resetActivePage() {
     var scrapbook = page.bindingContext;
-
+    
     scrapbook.pages.forEach(function (item) {
         item.set("isActive", false);
     });
-
-    scrapbook.set("selectedPage", scrapbook.pages.getItem(args.index));
-    updateStackLayout.bindingContext = scrapbook.selectedPage;
     
     scrapbook.selectedPage.set("isActive", true);
 }
 
+exports.onItemTap = function(args) {
+    var scrapbook = page.bindingContext;
+
+    scrapbook.set("selectedPage", scrapbook.pages.getItem(args.index));
+    updateStackLayout.bindingContext = scrapbook.selectedPage;
+
+    resetActivePage();
+}
+
 exports.onBirthDateTap = function(args) {
     var modalPageModule = "views/selectDate-page";
-    var context = { birthDate: page.bindingContext.birthDate };
+    var context = { birthDate: updateStackLayout.bindingContext.birthDate };
     var fullscreen = true;
 
     page.showModal(modalPageModule, context, function closeCallback(birthDate) {
-        page.bindingContext.selectedPage.set("birthDate", birthDate);
+        updateStackLayout.bindingContext.set("birthDate", birthDate);
     }, fullscreen);
 };
 
 exports.onGenderTap = function(args) {
     var modalPageModule = "views/selectGender-page";
-    var context = { gender: page.bindingContext.gender };
+    var context = { gender: updateStackLayout.bindingContext.gender };
     var fullscreen = true;
     page.showModal(modalPageModule, context, function closeCallback(gender) {
-        page.bindingContext.selectedPage.set("gender", gender);
+        updateStackLayout.bindingContext.set("gender", gender);
     }, fullscreen);
 };
 
