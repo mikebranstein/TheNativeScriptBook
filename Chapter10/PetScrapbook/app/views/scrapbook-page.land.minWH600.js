@@ -79,7 +79,9 @@ function resetActivePage() {
         item.set("isActive", false);
     });
     
-    scrapbook.selectedPage.set("isActive", true);
+    if (scrapbook.selectedPage != null) {
+        scrapbook.selectedPage.set("isActive", true);
+    }
 }
 
 exports.onItemTap = function(args) {
