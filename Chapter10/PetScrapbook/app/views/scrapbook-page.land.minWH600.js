@@ -117,9 +117,8 @@ exports.onDoneTap = function(args) {
     
     fileSystemService.fileSystemService.savePage(scrapbook.selectedPage);
 
-    scrapbook.selectedPage.set("isActive", false);
     scrapbook.set("selectedPage", null);
-    updateStackLayout.bindingContext = scrapbook.selectedPage;
+    resetActivePage();
 };
 
 exports.onAddImageTap = function (args) {
