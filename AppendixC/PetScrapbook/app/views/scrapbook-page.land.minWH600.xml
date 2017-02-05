@@ -1,4 +1,4 @@
-<Page xmlns:shared="shared/simple-label">
+<Page xmlns:shared="views/shared/simple-label">
     <StackLayout>
         <shared:simple-label />
         <shared:simple-label />
