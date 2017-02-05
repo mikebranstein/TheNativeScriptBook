@@ -1,7 +1,7 @@
 var observable = require("data/observable");
 var frame = require("ui/frame");
 var fileSystemService = require("~/data/fileSystemService");
-var camera = require("camera");
+var camera = require("nativescript-camera");
 var geolocation = require("nativescript-geolocation");
 
 exports.onLoaded = function(args) {
