@@ -30,6 +30,7 @@ exports.onAddImageTap = function (args) {
         geolocation.enableLocationRequest();
     }
 
+    camera.requestPermissions();
     camera.takePicture({ width: 100, height: 100, keepAspectRatio: true }).then(function (picture) {
         scrapbookPage.set("image", picture);
 
