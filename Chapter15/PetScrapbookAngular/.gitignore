@@ -1,0 +1,2 @@
+# Ignore TypeScript Generated files
+app/**/*.js
