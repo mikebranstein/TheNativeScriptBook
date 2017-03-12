@@ -1,6 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, ViewContainerRef } from "@angular/core";
 import { Image } from "ui/image";
 import * as camera from "camera";
+import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
+import { SelectDateComponent } from "../modals/selectDate/selectDate.component";
 
 @Component({
     selector: "detail",
@@ -10,15 +12,14 @@ import * as camera from "camera";
 export class DetailComponent {
     title: string;
     age: number;
-    birthDate: string;
+    birthDate: any;
     gender: string;
     lat: number;
     long: number;
 
-    constructor() {
+    constructor( private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef) {
         this.title = "Riven";
         this.age = 4;
-        this.birthDate = "12/25/2013";
         this.gender = "Female";
         this.lat = 31.434534;
         this.long = -24.53454;
@@ -29,7 +30,16 @@ export class DetailComponent {
     }
 
     onBirthDateTap(): void {
-        console.log('date tapped');
+        let options: ModalDialogOptions = {
+            context: this.birthDate,
+            fullscreen: true,
+            viewContainerRef: this.viewContainerRef
+        };
+
+        this.modalService.showModal(SelectDateComponent, options)
+            .then((dialogResult: any) => {
+                this.birthDate = dialogResult;
+            });
     }
 
     onGenderTap(): void {

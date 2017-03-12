@@ -11,7 +11,7 @@
             <StackLayout class="input-field">
                 <Label class="label" [text]="'Birth date: ' + (birthDate === null ? '' : '(' + age + ' years old)')" ></Label>
                 <TextField class="input" editable="false"
-                    [text]="birthDate" 
+                    [text]="birthDate | date:'shortDate'" 
                     (tap)="onBirthDateTap()" hint="Enter a birth date..." ></TextField>                
             </StackLayout>
             <StackLayout class="input-field">
