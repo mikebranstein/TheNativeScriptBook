@@ -6,13 +6,16 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "./views/home/home.component";
 import { DetailComponent } from "./views/detail/detail.component";
 import { SelectDateComponent } from "./views//modals/selectDate/selectDate.component";
+import { SelectGenderComponent } from "./views//modals/selectGender/selectGender.component";
 
 @NgModule({
   declarations: [AppComponent,
     HomeComponent,
     DetailComponent,
-    SelectDateComponent],
-  entryComponents: [SelectDateComponent],
+    SelectDateComponent,
+    SelectGenderComponent],
+  entryComponents: [SelectDateComponent,
+    SelectGenderComponent],
   bootstrap: [DetailComponent],
   imports: [NativeScriptModule,
     NativeScriptFormsModule]

@@ -3,6 +3,7 @@ import { Image } from "ui/image";
 import * as camera from "camera";
 import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
 import { SelectDateComponent } from "../modals/selectDate/selectDate.component";
+import { SelectGenderComponent } from "../modals/selectGender/selectGender.component";
 
 @Component({
     selector: "detail",
@@ -20,7 +21,6 @@ export class DetailComponent {
     constructor( private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef) {
         this.title = "Riven";
         this.age = 4;
-        this.gender = "Female";
         this.lat = 31.434534;
         this.long = -24.53454;
     }
@@ -43,7 +43,16 @@ export class DetailComponent {
     }
 
     onGenderTap(): void {
-        console.log('gender tapped');
+        let options: ModalDialogOptions = {
+            context: this.gender,
+            fullscreen: true,
+            viewContainerRef: this.viewContainerRef
+        };
+
+        this.modalService.showModal(SelectGenderComponent, options)
+            .then((dialogResult: string) => {
+                this.gender = dialogResult;
+            });
     }
 
     onAddImageTap(): void {
