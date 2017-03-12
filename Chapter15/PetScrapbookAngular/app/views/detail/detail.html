@@ -1,0 +1,30 @@
+<ActionBar [title]="title === null || title === undefined || title === '' ? 'New Page' : title + '\'s Page'" >
+            <ActionItem (tap)="onDoneTap()" ios.position="right" 
+                text="Done" android.position="actionBar" ></ActionItem>
+</ActionBar>
+<StackLayout>
+        <StackLayout class="form">
+            <StackLayout class="input-field">
+                <Label class="label" text="Name:" ></Label>
+                <TextField class="input" [text]="title" hint="Enter a name..." ></TextField>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label class="label" [text]="'Birth date: ' + (birthDate === null ? '' : '(' + age + ' years old)')" ></Label>
+                <TextField class="input" editable="false"
+                    [text]="birthDate" 
+                    (tap)="onBirthDateTap()" hint="Enter a birth date..." ></TextField>                
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label class="label" text="Gender:"></Label>
+                <TextField class="input" editable="false"
+                    [text]="gender" 
+                    (tap)="onGenderTap()" hint="Select a gender..." ></TextField>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label class="label" text="Image:" ></Label>
+                <Image [src]="image" stretch="None" ></Image>
+                <Label class="footnote" [text]="(lat === undefined || long === undefined) ? '' : 'Picture taken at ' + lat + ', ' + long" ></Label>
+            </StackLayout>
+        </StackLayout>
+        <Button class="btn btn-primary btn-rounded-sm btn-active" (tap)="onAddImageTap()" text="Add Image" ></Button> 
+</StackLayout>
