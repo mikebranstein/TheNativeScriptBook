@@ -7,17 +7,10 @@ import { Page } from "../../models/page";
 })
     
 export class ListComponent {
-    public pages: Array<Page> = [];
+    public pages: Array<Page>;
 
     constructor() {
-        let pageOne = new Page();
-        pageOne.Title = "Pittens";
-        
-        let pageTwo = new Page();
-        pageTwo.Title = "Nibbles";
-        
-        this.pages.push(pageOne);
-        this.pages.push(pageTwo);
+
     }
 
     onAddTap(): void {
@@ -25,6 +18,6 @@ export class ListComponent {
     }
 
     onItemTap(): void {
-        
+
     }
 }
