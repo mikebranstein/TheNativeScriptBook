@@ -18,6 +18,6 @@ export class ListComponent {
     }
 
     onItemTap(): void {
-
+        
     }
 }

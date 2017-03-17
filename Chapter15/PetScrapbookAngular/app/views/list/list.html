@@ -1,8 +1,8 @@
 <ActionBar title="Pet Scrapbook" >
-    <ActionItem (tap)="onAddTap" ios.position="right" text="Add" android.position="actionBar"></ActionItem>
+    <ActionItem (tap)="onAddTap()" ios.position="right" text="Add" android.position="actionBar"></ActionItem>
 </ActionBar>
 <GridLayout rows="*" columns="*">
-    <ListView class="list-group" [items]="pages" (itemTap)="onItemTap">
+    <ListView class="list-group" [items]="pages" (itemTap)="onItemTap()">
         <template let-item="item">
             <StackLayout orientation="horizontal" class="list-group-item">
                 <Image class="thumb img-circle" [src]="item.Image"></Image>
