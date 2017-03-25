@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Page } from "../../models/page";
 import { Router, NavigationExtras } from "@angular/router";
+import { ItemEventData } from "ui/list-view";
 
 @Component({
     selector: "list",
@@ -16,17 +17,18 @@ export class ListComponent {
     onAddTap(): void {
         let navigationExtras: NavigationExtras = {
           queryParams: {
-            //"continueGame": true
+            "id": 0
           }
         };
         
         this.router.navigate(["detail"], navigationExtras);
     }
 
-    onItemTap(): void {
+    onItemTap(args: ItemEventData): void {
+      let id = args.object["id"];
         let navigationExtras: NavigationExtras = {
           queryParams: {
-            //"continueGame": true
+            "id": id
           }
         };
         

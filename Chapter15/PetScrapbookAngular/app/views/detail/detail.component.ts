@@ -5,13 +5,18 @@ import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/mod
 import { SelectDateComponent } from "../modals/selectDate/selectDate.component";
 import { SelectGenderComponent } from "../modals/selectGender/selectGender.component";
 import * as geolocation from "nativescript-geolocation";
+import { Page } from "../../models/page";
+import { Router, ActivatedRoute } from "@angular/router";
+import { FileSystemService } from "../../services/fileSystemService";
 
 @Component({
     selector: "detail",
+    providers: [FileSystemService],
     templateUrl: "views/detail/detail.html",
     styleUrls: ["views/detail/detail.css"]
 })
 export class DetailComponent {
+    id: number;
     title: string;
     age: string;
     birthDate: any;
@@ -20,11 +25,26 @@ export class DetailComponent {
     long: number;
     image: ImageSource;
 
-    constructor(private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef) {
+    constructor(private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef,
+        private router: Router, private route: ActivatedRoute, private fileSystemService: FileSystemService) {
+        route.queryParams.subscribe((params) => {
+            let id = params["id"];
+
+            console.log(id);            
+            // if (id != 0) {
+            //     this.id = page.Id;
+            //     this.title = page.Title;
+            //     this.age = page.Age;
+            //     this.birthDate = page.BirthDate;
+            //     this.lat = page.Lat;
+            //     this.long = page.Long;
+            //     this.image = page.Image;
+            // }
+        });
     }
 
     onDoneTap(): void {
-        console.log('done tapped');
+        this.router.navigate(["list"]);
     }
 
     onBirthDateTap(): void {
