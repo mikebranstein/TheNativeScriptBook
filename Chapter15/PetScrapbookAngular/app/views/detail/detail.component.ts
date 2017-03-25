@@ -24,26 +24,43 @@ export class DetailComponent {
     lat: number;
     long: number;
     image: ImageSource;
+    imageBase64: string;
 
     constructor(private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef,
         private router: Router, private route: ActivatedRoute, private fileSystemService: FileSystemService) {
         route.queryParams.subscribe((params) => {
             let id = params["id"];
+            let page = fileSystemService.getPage(id);
 
-            console.log(id);            
-            // if (id != 0) {
-            //     this.id = page.Id;
-            //     this.title = page.Title;
-            //     this.age = page.Age;
-            //     this.birthDate = page.BirthDate;
-            //     this.lat = page.Lat;
-            //     this.long = page.Long;
-            //     this.image = page.Image;
-            // }
+            if (page !== null) {
+                this.id = page.Id;
+                this.title = page.Title;
+                this.gender = page.Gender;
+                this.age = page.Age;
+                this.birthDate = page.BirthDate;
+                this.lat = page.Lat;
+                this.long = page.Long;
+                this.image = page.Image;
+                this.imageBase64 = page.ImageBase64;
+            } else {
+                this.id = id;
+            }
         });
     }
 
     onDoneTap(): void {
+        let page = new Page();
+
+        page.Id = this.id;
+        page.Title = this.title;
+        page.Gender = this.gender;
+        page.Age = this.age;
+        page.BirthDate = this.birthDate;
+        page.Lat = this.lat;
+        page.Long = this.long;
+        page.ImageBase64 = this.imageBase64;
+
+        this.fileSystemService.savePage(page);
         this.router.navigate(["list"]);
     }
 
@@ -86,6 +103,7 @@ export class DetailComponent {
         camera.takePicture({ width: 100, height: 100, keepAspectRatio: true })
             .then((picture) => {
                 this.image = picture;
+                this.imageBase64 = picture.toBase64String("png");
 
                 geolocation.getCurrentLocation(null)
                     .then((location) => {

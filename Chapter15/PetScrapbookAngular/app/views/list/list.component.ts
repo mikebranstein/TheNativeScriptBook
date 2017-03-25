@@ -2,22 +2,25 @@ import { Component } from "@angular/core";
 import { Page } from "../../models/page";
 import { Router, NavigationExtras } from "@angular/router";
 import { ItemEventData } from "ui/list-view";
+import { FileSystemService } from "../../services/fileSystemService";
 
 @Component({
-    selector: "list",
+  selector: "list",
+  providers: [FileSystemService],
     templateUrl: "views/list/list.html"
 })
 
 export class ListComponent {
     public pages: Array<Page>;
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private fileSystemService: FileSystemService) {
+      this.pages = fileSystemService.getPages();
     }
 
     onAddTap(): void {
         let navigationExtras: NavigationExtras = {
           queryParams: {
-            "id": 0
+            "id": this.pages.length
           }
         };
         
@@ -25,13 +28,13 @@ export class ListComponent {
     }
 
     onItemTap(args: ItemEventData): void {
-      let id = args.object["id"];
-        let navigationExtras: NavigationExtras = {
-          queryParams: {
-            "id": id
-          }
-        };
+      let id = args.index;
+      let navigationExtras: NavigationExtras = {
+        queryParams: {
+          "id": id
+        }
+      };
         
-        this.router.navigate(["detail"], navigationExtras);
+      this.router.navigate(["detail"], navigationExtras);
     }
 }
