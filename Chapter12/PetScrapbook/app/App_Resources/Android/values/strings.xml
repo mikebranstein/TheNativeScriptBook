@@ -1,4 +1,4 @@
 <resources>
-    <string name="appName">Pet Scrapbook</string>
-    <string name="activityName">Pet Scrapbook</string>
+    <string name="app_name">Pet Scrapbook</string>
+    <string name="title_activity_kimera">Pet Scrapbook</string>
 </resources>

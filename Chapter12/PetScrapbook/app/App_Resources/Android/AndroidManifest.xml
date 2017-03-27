@@ -22,12 +22,12 @@
 		android:name="com.tns.NativeScriptApplication"
 		android:allowBackup="true"
 		android:icon="@drawable/icon"
-		android:label="@string/appName"
+		android:label="@string/app_name"
 		android:theme="@style/AppTheme">
 
 		<activity
 			android:name="com.tns.NativeScriptActivity"
-			android:label="@string/activityName"
+			android:label="@string/title_activity_kimera"
 			android:configChanges="keyboardHidden|orientation|screenSize"
 			android:theme="@style/LaunchScreenTheme">
 
