@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Page } from "../../models/page";
 import { Router, NavigationExtras } from "@angular/router";
 import { ItemEventData } from "ui/list-view";
@@ -10,12 +10,16 @@ import { PageService } from "../../services/page.service";
     templateUrl: "views/list/list.html"
 })
 
-export class ListComponent {
-    public pages: Array<Page>;
+export class ListComponent implements OnInit {
+  public pages: Array<Page>;
 
     constructor(private router: Router, private pageService: PageService) {
-      this.pages = pageService.getPages();
     }
+
+  ngOnInit(): void {
+      this.pages = this.pageService.getPages();
+  }
+
 
     onAddTap(): void {
         let navigationExtras: NavigationExtras = {
