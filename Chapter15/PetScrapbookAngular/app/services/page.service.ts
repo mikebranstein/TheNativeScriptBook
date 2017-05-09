@@ -12,10 +12,7 @@ export class PageService {
         if (index === -1)
             return null;
 
-        let page = pages[index];
-        page.Image = image.fromBase64(page.ImageBase64);
-             
-        return page;
+        return pages[index];
     }
     
     getPages(): Array<Page> {
