@@ -2,19 +2,19 @@ import { Component } from "@angular/core";
 import { Page } from "../../models/page";
 import { Router, NavigationExtras } from "@angular/router";
 import { ItemEventData } from "ui/list-view";
-import { FileSystemService } from "../../services/fileSystemService";
+import { PageService } from "../../services/page.service";
 
 @Component({
   selector: "list",
-  providers: [FileSystemService],
+  providers: [ PageService ],
     templateUrl: "views/list/list.html"
 })
 
 export class ListComponent {
     public pages: Array<Page>;
 
-    constructor(private router: Router, private fileSystemService: FileSystemService) {
-      this.pages = fileSystemService.getPages();
+    constructor(private router: Router, private pageService: PageService) {
+      this.pages = pageService.getPages();
     }
 
     onAddTap(): void {

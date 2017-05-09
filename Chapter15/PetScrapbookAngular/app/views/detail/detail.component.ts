@@ -7,11 +7,11 @@ import { SelectGenderComponent } from "../modals/selectGender/selectGender.compo
 import * as geolocation from "nativescript-geolocation";
 import { Page } from "../../models/page";
 import { Router, ActivatedRoute } from "@angular/router";
-import { FileSystemService } from "../../services/fileSystemService";
+import { PageService } from "../../services/page.service";
 
 @Component({
     selector: "detail",
-    providers: [FileSystemService],
+    providers: [ PageService ],
     templateUrl: "views/detail/detail.html",
     styleUrls: ["views/detail/detail.css"]
 })
@@ -27,10 +27,10 @@ export class DetailComponent {
     imageBase64: string;
 
     constructor(private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef,
-        private router: Router, private route: ActivatedRoute, private fileSystemService: FileSystemService) {
+        private router: Router, private route: ActivatedRoute, private pageService: PageService) {
         route.queryParams.subscribe((params) => {
             let id = params["id"];
-            let page = fileSystemService.getPage(id);
+            let page = pageService.getPage(id);
 
             if (page !== null) {
                 this.id = page.Id;
@@ -60,7 +60,7 @@ export class DetailComponent {
         page.Long = this.long;
         page.ImageBase64 = this.imageBase64;
 
-        this.fileSystemService.savePage(page);
+        this.pageService.savePage(page);
         this.router.navigate(["list"]);
     }
 

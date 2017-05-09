@@ -4,7 +4,7 @@ import * as fileSystem from "file-system";
 import * as image from "image-source";
 
 @Injectable()
-export class FileSystemService {
+export class PageService {
     getPage(id: number): Page {
         let pages = this.getPages();
         let index = this.findPageIndex(pages, id);
