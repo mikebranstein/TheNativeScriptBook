@@ -6,7 +6,7 @@ export const routes: any = [
   { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent },
   { path: "list", component: ListComponent },
-  { path: "detail", component: DetailComponent }
+  { path: "detail/:id", component: DetailComponent }
 ];
 
 export const navigatableComponents: any = [

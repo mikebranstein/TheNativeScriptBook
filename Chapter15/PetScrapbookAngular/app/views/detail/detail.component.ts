@@ -1,4 +1,4 @@
-import { Component, ViewContainerRef } from "@angular/core";
+import { Component, OnInit, ViewContainerRef } from "@angular/core";
 import { ImageSource } from "image-source";
 import * as camera from "camera";
 import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
@@ -6,8 +6,10 @@ import { SelectDateComponent } from "../modals/selectDate/selectDate.component";
 import { SelectGenderComponent } from "../modals/selectGender/selectGender.component";
 import * as geolocation from "nativescript-geolocation";
 import { Page } from "../../models/page";
-import { Router, ActivatedRoute } from "@angular/router";
+import { RouterExtensions, PageRoute } from "nativescript-angular/router";
+import { NavigationOptions } from "nativescript-angular/router/ns-location-strategy";
 import { PageService } from "../../services/page.service";
+import "rxjs/add/operator/switchMap";
 
 @Component({
     selector: "detail",
@@ -15,83 +17,65 @@ import { PageService } from "../../services/page.service";
     templateUrl: "views/detail/detail.html",
     styleUrls: ["views/detail/detail.css"]
 })
-export class DetailComponent {
-    id: number;
-    title: string;
-    age: string;
-    birthDate: any;
-    gender: string;
-    lat: number;
-    long: number;
-    image: ImageSource;
-    imageBase64: string;
+export class DetailComponent implements OnInit {
+    page: Page;
 
     constructor(private modalService: ModalDialogService, private viewContainerRef: ViewContainerRef,
-        private router: Router, private route: ActivatedRoute, private pageService: PageService) {
-        route.queryParams.subscribe((params) => {
-            let id = params["id"];
-            let page = pageService.getPage(id);
+        private routerExtensions: RouterExtensions, private pageRoute: PageRoute, private pageService: PageService) {
 
-            if (page !== null) {
-                this.id = page.Id;
-                this.title = page.Title;
-                this.gender = page.Gender;
-                this.age = page.Age;
-                this.birthDate = page.BirthDate;
-                this.lat = page.Lat;
-                this.long = page.Long;
-                this.image = page.Image;
-                this.imageBase64 = page.ImageBase64;
-            } else {
-                this.id = id;
-            }
-        });
+    }
+
+    ngOnInit(): void {
+        let id:number;
+        this.pageRoute.activatedRoute
+            .switchMap(activatedRoute => activatedRoute.params)
+            .forEach((params) => {
+                id = +params["id"];
+            });
+
+        this.page = this.pageService.getPage(id);
+        if (this.page === null) {
+            this.page = <Page>{ Id: id };
+        }
     }
 
     onDoneTap(): void {
-        let page = new Page();
+        this.pageService.savePage(this.page);
 
-        page.Id = this.id;
-        page.Title = this.title;
-        page.Gender = this.gender;
-        page.Age = this.age;
-        page.BirthDate = this.birthDate;
-        page.Lat = this.lat;
-        page.Long = this.long;
-        page.ImageBase64 = this.imageBase64;
-
-        this.pageService.savePage(page);
-        this.router.navigate(["list"]);
+        var options = <NavigationOptions>{
+            clearHistory: true
+        };
+        this.routerExtensions.navigate(["list"], options);
     }
 
     onBirthDateTap(): void {
         let options: ModalDialogOptions = {
-            context: this.birthDate,
+            context: this.page.BirthDate,
             fullscreen: true,
             viewContainerRef: this.viewContainerRef
         };
 
         this.modalService.showModal(SelectDateComponent, options)
             .then((dialogResult: any) => {
-                this.birthDate = dialogResult;
+                this.page.BirthDate = dialogResult;
                 
                 let now = Date.now();
-                let diff = Math.abs(now - this.birthDate) / 1000 / 31536000;
+                let diff = Math.abs(now - this.page.BirthDate) / 1000 / 31536000;
 
-                this.age = diff.toFixed(1);
+                this.page.Age = diff.toFixed(1);
             });
     }
 
     onGenderTap(): void {
         let options: ModalDialogOptions = {
-            context: this.gender,
+            context: this.page.Gender,
             fullscreen: true,
             viewContainerRef: this.viewContainerRef
         };
 
         this.modalService.showModal(SelectGenderComponent, options)
             .then((dialogResult: string) => {
-                this.gender = dialogResult;
+                this.page.Gender = dialogResult;
             });
     }
 
@@ -102,13 +86,13 @@ export class DetailComponent {
 
         camera.takePicture({ width: 100, height: 100, keepAspectRatio: true })
             .then((picture) => {
-                this.image = picture;
-                this.imageBase64 = picture.toBase64String("png");
+                this.page.Image = picture;
+                this.page.ImageBase64 = picture.toBase64String("png");
 
                 geolocation.getCurrentLocation(null)
                     .then((location) => {
-                        this.lat = location.latitude;
-                        this.long = location.longitude;
+                        this.page.Lat = location.latitude;
+                        this.page.Long = location.longitude;
                     });
             });
     }

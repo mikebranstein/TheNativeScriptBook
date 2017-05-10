@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Router, NavigationExtras } from "@angular/router";
+import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
   selector: "home",
@@ -7,17 +7,10 @@ import { Router, NavigationExtras } from "@angular/router";
   styleUrls: ["views/home/home.css"]
 })
 export class HomeComponent {
-  constructor(private router: Router) {
+  constructor(private routerExtensions: RouterExtensions) {
   }
 
-  onContinueTap(): void {
-    // let navigationExtras: NavigationExtras = {
-    //   queryParams: {
-    //     "continueGame": true
-    //   }
-    // };
-    
-    // this.router.navigate(["list"], navigationExtras);
-    this.router.navigate(["list"]);
+  onContinueTap(): void {    
+    this.routerExtensions.navigate(["list"]);
   }
 }
