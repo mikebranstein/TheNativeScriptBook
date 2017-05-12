@@ -24,14 +24,16 @@ export class ListComponent implements OnInit {
   onAddTap(): void {
       var options = <NavigationOptions>{
             clearHistory: true
-        };
-      
+      };
       this.routerExtensions.navigate(["detail", this.pages.length], options);
   }
 
     onItemTap(args: ItemEventData): void {
       let id = args.index;
-        
-      this.routerExtensions.navigate(["detail", id]);
+
+      var options = <NavigationOptions>{
+            clearHistory: true
+      };
+      this.routerExtensions.navigate(["detail", id], options);
     }
 }
