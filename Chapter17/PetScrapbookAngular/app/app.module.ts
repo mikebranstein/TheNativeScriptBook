@@ -7,8 +7,8 @@ import { routes, navigatableComponents } from "./app.routing";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./views/home/home.component";
 import { DetailComponent } from "./views/detail/detail.component";
-import { SelectDateComponent } from "./views//modals/selectDate/selectDate.component";
-import { SelectGenderComponent } from "./views//modals/selectGender/selectGender.component";
+import { SelectDateComponent } from "./views//modals/select-date/select-date.component";
+import { SelectGenderComponent } from "./views//modals/select-gender/select-gender.component";
 import { ListComponent } from "./views/list/list.component";
 
 @NgModule({

@@ -2,8 +2,9 @@ import { Component } from "@angular/core";
 import { ModalDialogParams } from "nativescript-angular/modal-dialog";
 
 @Component({
-    selector: "selectDate",
-    templateUrl: "views/modals/selectDate/selectDate.html"
+    selector: "select-date",
+    templateUrl: "views/modals/select-date/select-date.html",
+    styleUrls: ["views/modals/select-date/select-date.css"]
 })
 export class SelectDateComponent {
     date: any;

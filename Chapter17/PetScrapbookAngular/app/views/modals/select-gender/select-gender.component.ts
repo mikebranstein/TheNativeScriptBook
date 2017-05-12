@@ -2,8 +2,9 @@ import { Component } from "@angular/core";
 import { ModalDialogParams } from "nativescript-angular/modal-dialog";
 
 @Component({
-    selector: "selectGender",
-    templateUrl: "views/modals/selectGender/selectGender.html"
+    selector: "select-gender",
+    templateUrl: "views/modals/select-gender/select-gender.html",
+    styleUrls: ["views/modals/select-gender/select-gender.css"]
 })
 
 export class SelectGenderComponent {

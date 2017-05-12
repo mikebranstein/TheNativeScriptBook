@@ -22,9 +22,9 @@ export class ListComponent implements OnInit {
   }
 
   onAddTap(): void {
-      let options: NavigationOptions = {
-        clearHistory: true
-      };
+      var options = <NavigationOptions>{
+            clearHistory: true
+        };
       
       this.routerExtensions.navigate(["detail", this.pages.length], options);
   }
