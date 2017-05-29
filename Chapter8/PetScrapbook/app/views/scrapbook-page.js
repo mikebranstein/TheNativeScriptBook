@@ -25,7 +25,7 @@ exports.onLoaded = function(args) {
         scrapbook = page.navigationContext.model;
     }
     else {
-        scrapbook = new observable.Observable({
+        scrapbook = new observable.fromObject({
             pages: new observableArray.ObservableArray(new scrapbookPageModel())
         });
     } 
@@ -36,6 +36,8 @@ exports.onLoaded = function(args) {
 exports.onAddTap = function(args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
+
+    console.log(scrapbook);
     
     scrapbook.pages.push(new scrapbookPageModel());
 
