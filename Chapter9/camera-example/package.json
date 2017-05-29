@@ -6,14 +6,15 @@
   "nativescript": {
     "id": "org.nativescript.cameraexample",
     "tns-ios": {
-      "version": "2.3.0"
+      "version": "3.0.1"
     },
     "tns-android": {
-      "version": "2.3.0"
+      "version": "3.0.0"
     }
   },
   "dependencies": {
-    "tns-core-modules": "2.3.0"
+    "nativescript-camera": "^3.0.0",
+    "tns-core-modules": "^3.0.1"
   },
   "devDependencies": {
     "babel-traverse": "6.16.0",

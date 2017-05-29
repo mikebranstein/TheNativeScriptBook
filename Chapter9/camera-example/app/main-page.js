@@ -1,4 +1,4 @@
-var camera = require("camera");
+var camera = require("nativescript-camera");
 var imageModule = require("ui/image");
 
 var myImage;

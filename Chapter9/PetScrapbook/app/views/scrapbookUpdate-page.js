@@ -3,6 +3,7 @@ var frame = require("ui/frame");
 var fileSystemService = require("~/data/fileSystemService");
 var camera = require("nativescript-camera");
 var geolocation = require("nativescript-geolocation");
+var image = require("image-source");
 
 exports.onLoaded = function(args) {
     var page = args.object;
@@ -32,7 +33,9 @@ exports.onAddImageTap = function (args) {
 
     camera.requestPermissions();
     camera.takePicture({ width: 100, height: 100, keepAspectRatio: true }).then(function (picture) {
-        scrapbookPage.set("image", picture);
+        image.fromAsset(picture).then(function (imageSource) {
+            scrapbookPage.set("image", imageSource);    
+        });
 
         geolocation.getCurrentLocation().then(function (location) {
             scrapbookPage.set("lat", location.latitude);

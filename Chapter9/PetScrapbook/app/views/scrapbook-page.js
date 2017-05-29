@@ -4,7 +4,8 @@ var frame = require("ui/frame");
 var fileSystemService = require("~/data/fileSystemService");
 
 function scrapbookPageModel(id){
-    var model = new observable.Observable({ id: id });
+    var model = new observable.Observable();
+    model.id = id;
 
     model.genders = ["Female", "Male", "Other"];
     model.calcAge = function(year, month, day){
@@ -20,7 +21,7 @@ function scrapbookPageModel(id){
 
 exports.onLoaded = function(args) {
     var page = args.object;
-    var scrapbook = new observable.Observable({ pages: new observableArray.ObservableArray() });
+    var scrapbook = new observable.fromObject({ pages: new observableArray.ObservableArray() });
     var pages = fileSystemService.fileSystemService.getPages();
 
     if (pages.length !== 0) {
@@ -41,7 +42,7 @@ exports.onLoaded = function(args) {
         });
     }
     else {
-        scrapbook = new observable.Observable({
+        scrapbook = new observable.fromObject({
             pages: new observableArray.ObservableArray()
         });
     } 

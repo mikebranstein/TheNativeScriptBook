@@ -6,16 +6,16 @@
   "nativescript": {
     "id": "org.nativescript.PetScrapbook",
     "tns-ios": {
-      "version": "2.5.0"
+      "version": "3.0.1"
     },
     "tns-android": {
-      "version": "2.5.0"
+      "version": "3.0.0"
     }
   },
   "dependencies": {
-    "nativescript-camera": "0.0.8",
-    "nativescript-geolocation": "0.0.13",
-    "tns-core-modules": "^2.5.0"
+    "nativescript-camera": "^3.0.0",
+    "nativescript-geolocation": "^3.0.0",
+    "tns-core-modules": "^3.0.1"
   },
   "devDependencies": {
     "babel-traverse": "6.12.0",
