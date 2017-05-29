@@ -36,8 +36,6 @@ exports.onLoaded = function(args) {
 exports.onAddTap = function(args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
-
-    console.log(scrapbook);
     
     scrapbook.pages.push(new scrapbookPageModel());
 
