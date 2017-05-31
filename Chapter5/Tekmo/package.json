@@ -1,15 +1,15 @@
 {
-	"description": "NativeScript Application",
-	"license": "SEE LICENSE IN <your-license-filename>",
-	"readme": "NativeScript Application",
-	"repository": "<fill-your-repository-here>",
-	"nativescript": {
-		"id": "org.nativescript.Tekmo",
-		"tns-ios": {
-			"version": "2.1.1"
-		}
-	},
-	"dependencies": {
-		"tns-core-modules": "2.0.1"
-	}
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.Tekmo",
+    "tns-ios": {
+      "version": "3.0.1"
+    }
+  },
+  "dependencies": {
+    "tns-core-modules": "^3.0.1"
+  }
 }
