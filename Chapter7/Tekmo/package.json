@@ -6,10 +6,10 @@
   "nativescript": {
     "id": "org.nativescript.Tekmo",
     "tns-ios": {
-      "version": "2.4.0"
+      "version": "3.0.1"
     }
   },
   "dependencies": {
-    "tns-core-modules": "^2.4.4"
+    "tns-core-modules": "^3.0.1"
   }
 }
