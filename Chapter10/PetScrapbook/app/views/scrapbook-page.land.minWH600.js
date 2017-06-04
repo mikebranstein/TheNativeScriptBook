@@ -4,30 +4,17 @@ var frame = require("ui/frame");
 var view = require("ui/core/view");
 var fileSystemService = require("~/data/fileSystemService");
 
-var camera = require("camera");
+var camera = require("nativescript-camera");
 var geolocation = require("nativescript-geolocation");
+var image = require("image-source");
 
 var scrapbook;
 var page;
 var updateStackLayout;
 
 function scrapbookPageModel(){
-    var model = new observable.Observable({ 
-        title: null, 
-        birthDate: null, 
-        gender: null, 
-        image: null,
-        lat: null,
-        long: null,
-        isActive: false
-    });
-
-    model.calcAge = function(birthDate){
-        var now = Date.now();
-        var diff = Math.abs(now - birthDate) / 1000 / 31536000;
-
-        return diff.toFixed(1);
-    };
+    var model = new observable.Observable();
+    model.isActive = false;
     
     return model;
 }
@@ -36,9 +23,15 @@ exports.onLoaded = function(args) {
     page = args.object;
     updateStackLayout = view.getViewById(page, "updateStackLayout");
     
-    var scrapbook = new observable.Observable({
+    var scrapbook = new observable.fromObject({
         pages: new observableArray.ObservableArray(),
-        selectedPage: null
+        selectedPage: null,
+        calAge: function (birthDate) {
+            var now = Date.now();
+            var diff = Math.abs(now - birthDate) / 1000 / 31536000;
+
+            return diff.toFixed(1);
+        }
     });
 
     var pages = fileSystemService.fileSystemService.getPages();
@@ -128,16 +121,16 @@ exports.onAddImageTap = function (args) {
         geolocation.enableLocationRequest();
     }
 
-    camera
-        .takePicture({ width: 100, height: 100, keepAspectRatio: true })
-        .then(function (picture) {
-            scrapbookPage.set("image", picture);
-
-            geolocation
-                .getCurrentLocation()
-                .then(function (location) {
-                    scrapbookPage.set("lat", location.latitude);
-                    scrapbookPage.set("long", location.longitude);
-                });
+    camera.takePicture({ width: 100, height: 100, keepAspectRatio: true }).then(function (picture) {
+        image.fromAsset(picture).then(function (imageSource) {
+            scrapbookPage.set("image", imageSource);
         });
+
+        geolocation
+            .getCurrentLocation()
+            .then(function (location) {
+                scrapbookPage.set("lat", location.latitude);
+                scrapbookPage.set("long", location.longitude);
+            });
+    });
 };
