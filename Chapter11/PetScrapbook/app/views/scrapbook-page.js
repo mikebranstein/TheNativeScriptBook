@@ -5,7 +5,8 @@ var view = require("ui/core/view");
 var fileSystemService = require("~/data/fileSystemService");
 
 function scrapbookPageModel(id){
-    var model = new observable.Observable({ id: id});
+    var model = new observable.Observable();
+    model.id = id;
 
     model.calcAge = function(birthDate){
         var now = Date.now();
@@ -21,7 +22,7 @@ function scrapbookPageModel(id){
 
 exports.onLoaded = function(args) {
     var page = args.object;
-    var scrapbook = new observable.Observable({ pages: new observableArray.ObservableArray() });
+    var scrapbook = new observable.fromObject({ pages: new observableArray.ObservableArray() });
     var pages = fileSystemService.fileSystemService.getPages();
 
     if (pages.length !== 0) {
@@ -40,7 +41,7 @@ exports.onLoaded = function(args) {
         });
     }
     else {
-        scrapbook = new observable.Observable({
+        scrapbook = new observable.fromObject({
             pages: new observableArray.ObservableArray()
         });
     } 
@@ -59,7 +60,7 @@ exports.onAddTap = function(args) {
     });
 };
 
-exports.onItemTap = function (args) {
+exports.onItemTap = function(args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
     
@@ -68,4 +69,4 @@ exports.onItemTap = function (args) {
         context: { model: scrapbook.pages.getItem(args.index) },
         clearHistory: true
     });
-};
+}

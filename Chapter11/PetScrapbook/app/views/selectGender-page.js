@@ -11,7 +11,7 @@ exports.onShownModally = function(args) {
 exports.onLoaded = function(args) {
     var page = args.object;
 
-    model = new observableModule.Observable({ 
+    model = new observableModule.fromObject({ 
         genders: ["Female", "Male", "Other"],
         gender: 0 
     });
