@@ -6,35 +6,36 @@
   "nativescript": {
     "id": "org.nativescript.PetScrapbookAngular",
     "tns-ios": {
-      "version": "2.5.0"
+      "version": "3.0.1"
     },
     "tns-android": {
-      "version": "2.5.0"
+      "version": "3.0.1"
     }
   },
   "dependencies": {
-    "@angular/common": "2.4.3",
-    "@angular/compiler": "2.4.3",
-    "@angular/core": "2.4.3",
-    "@angular/forms": "2.4.3",
-    "@angular/http": "2.4.3",
-    "@angular/platform-browser": "2.4.3",
-    "@angular/platform-browser-dynamic": "2.4.3",
-    "@angular/router": "3.4.3",
-    "nativescript-angular": "1.4.0",
-    "nativescript-theme-core": "~1.0.2",
-    "reflect-metadata": "~0.1.8",
-    "rxjs": "~5.0.1",
-    "tns-core-modules": "2.5.0"
+    "@angular/common": "4.1.2",
+    "@angular/compiler": "4.1.2",
+    "@angular/core": "4.1.2",
+    "@angular/forms": "4.1.2",
+    "@angular/http": "4.1.2",
+    "@angular/platform-browser": "4.1.2",
+    "@angular/platform-browser-dynamic": "4.1.2",
+    "@angular/router": "4.1.2",
+    "nativescript-angular": "3.0.0",
+    "nativescript-ngx-fonticon": "2.2.0",
+    "nativescript-theme-core": "1.0.4",
+    "reflect-metadata": "~0.1.10",
+    "rxjs": "5.4.0",
+    "tns-core-modules": "^3.0.1"
   },
   "devDependencies": {
-    "babel-traverse": "6.23.1",
-    "babel-types": "6.23.0",
-    "babylon": "6.16.1",
+    "babel-traverse": "6.24.1",
+    "babel-types": "6.24.1",
+    "babylon": "6.17.1",
     "lazy": "1.0.11",
-    "nativescript-dev-android-snapshot": "^0.*.*",
-    "nativescript-dev-typescript": "^0.3.5",
-    "typescript": "~2.1.0",
-    "zone.js": "~0.7.2"
+    "nativescript-dev-android-snapshot": "~0.0.9",
+    "nativescript-dev-typescript": "~0.4.4",
+    "typescript": "2.3.2",
+    "zone.js": "~0.8.10"
   }
 }
