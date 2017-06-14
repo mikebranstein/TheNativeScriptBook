@@ -5,15 +5,18 @@
   "repository": "<fill-your-repository-here>",
   "nativescript": {
     "id": "org.nativescript.PetScrapbook",
+    "tns-ios": {
+      "version": "3.0.1"
+    },
     "tns-android": {
-      "version": "2.5.0"
+      "version": "3.0.1"
     }
   },
   "dependencies": {
     "nativescript-camera": "0.0.8",
     "nativescript-geolocation": "0.0.13",
     "nativescript-theme-core": "^0.1.5",
-    "tns-core-modules": "^2.5.2",
+    "tns-core-modules": "^3.0.1",
     "tns-core-modules-snapshot": "2.4.2-5.2.361"
   },
   "devDependencies": {

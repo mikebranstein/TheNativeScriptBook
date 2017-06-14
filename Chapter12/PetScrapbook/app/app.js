@@ -1,7 +1,6 @@
 var application = require("application");
 application.cssFile = "./app.css";
 
-
 var dateConverter = function(value, format) {
     if (value === null || value === undefined || value === '') return '';
 
@@ -14,7 +13,8 @@ var dateConverter = function(value, format) {
     return result;
 };
 
-application.resources["dateConverter"] = dateConverter;
-application.resources["dateFormat"] = "MM/DD/YYYY";
+var resources = application.getResources();
+resources.dateConverter = dateConverter;
+resources.dateFormat = "MM/DD/YYYY";
 
 application.start({ moduleName: "views/home-page" });

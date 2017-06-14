@@ -33,9 +33,7 @@ fileSystemService.prototype.savePage = function (scrapbookPage) {
             id: scrapbookPage.id,
             title: scrapbookPage.title,
             gender: scrapbookPage.gender,
-            year: scrapbookPage.year,
-            month: scrapbookPage.month,
-            day: scrapbookPage.day,
+            birthDate: scrapbookPage.birthDate,
             imageBase64: scrapbookPage.image != null ? scrapbookPage.image.toBase64String("png") : null,
             lat: scrapbookPage.lat,
             long: scrapbookPage.long
@@ -46,9 +44,7 @@ fileSystemService.prototype.savePage = function (scrapbookPage) {
             id: scrapbookPage.id,
             title: scrapbookPage.title,
             gender: scrapbookPage.gender,
-            year: scrapbookPage.year,
-            month: scrapbookPage.month,
-            day: scrapbookPage.day,
+            birthDate: scrapbookPage.birthDate,
             imageBase64: scrapbookPage.image != null ? scrapbookPage.image.toBase64String("png") : null,
             lat: scrapbookPage.lat,
             long: scrapbookPage.long

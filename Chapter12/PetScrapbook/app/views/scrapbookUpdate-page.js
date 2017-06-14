@@ -1,8 +1,10 @@
 var observable = require("data/observable");
 var frame = require("ui/frame");
 var fileSystemService = require("~/data/fileSystemService");
-var camera = require("camera");
+var camera = require("nativescript-camera");
 var geolocation = require("nativescript-geolocation");
+var image = require("image-source");
+var application = require("application");
 
 var page;
 
@@ -16,6 +18,7 @@ exports.onLoaded = function(args) {
 exports.onBirthDateTap = function(args) {
     var modalPageModule = "views/selectDate-page";
     var context = { birthDate: page.bindingContext.birthDate };
+
     var fullscreen = true;
     page.showModal(modalPageModule, context, function closeCallback(birthDate) {
         page.bindingContext.set("birthDate", birthDate);
@@ -52,16 +55,16 @@ exports.onAddImageTap = function (args) {
         geolocation.enableLocationRequest();
     }
 
-    camera
-        .takePicture({ width: 100, height: 100, keepAspectRatio: true })
-        .then(function (picture) {
-            scrapbookPage.set("image", picture);
-
-            geolocation
-                .getCurrentLocation()
-                .then(function (location) {
-                    scrapbookPage.set("lat", location.latitude);
-                    scrapbookPage.set("long", location.longitude);
-                });
+    camera.takePicture({ width: 100, height: 100, keepAspectRatio: true }).then(function (picture) {
+        image.fromAsset(picture).then(function (imageSource) {
+            scrapbookPage.set("image", imageSource);
         });
+
+        geolocation
+            .getCurrentLocation()
+            .then(function (location) {
+                scrapbookPage.set("lat", location.latitude);
+                scrapbookPage.set("long", location.longitude);
+            });
+    });
 };
