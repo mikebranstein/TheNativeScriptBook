@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewContainerRef } from "@angular/core";
 import { ImageSource } from "image-source";
-import * as camera from "camera";
+import * as camera from "nativescript-camera";
 import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
 import { SelectDateComponent } from "../modals/select-date/select-date.component";
 import { SelectGenderComponent } from "../modals/select-gender/select-gender.component";
@@ -86,8 +86,12 @@ export class DetailComponent implements OnInit {
 
         camera.takePicture({ width: 100, height: 100, keepAspectRatio: true })
             .then((picture) => {
-                this.page.Image = picture;
-                this.page.ImageBase64 = picture.toBase64String("png");
+                let image = new ImageSource();
+
+                image.fromAsset(picture).then((imageSource) => {
+                    this.page.Image = imageSource;
+                    this.page.ImageBase64 = this.page.Image.toBase64String("png");
+                });
 
                 geolocation.getCurrentLocation(null)
                     .then((location) => {

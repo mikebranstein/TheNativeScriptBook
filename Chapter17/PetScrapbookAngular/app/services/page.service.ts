@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Page } from "../models/page";
 import * as fileSystem from "file-system";
-import * as image from "image-source";
+import { fromBase64 } from "image-source";
 
 @Injectable()
 export class PageService {
@@ -20,7 +20,7 @@ export class PageService {
         let pages = file.readTextSync().length === 0 ? new Array<Page>() : <Array<Page>>JSON.parse(file.readTextSync());
 
         pages.forEach((page) => {
-            page.Image = image.fromBase64(page.ImageBase64);
+            page.Image = fromBase64(page.ImageBase64);
         });
         
         return pages;
