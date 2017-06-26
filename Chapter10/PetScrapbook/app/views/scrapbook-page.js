@@ -1,21 +1,20 @@
 var observable = require("data/observable");
 var observableArray = require("data/observable-array");
 var frame = require("ui/frame");
-var view = require("ui/core/view");
 var fileSystemService = require("~/data/fileSystemService");
 
 function scrapbookPageModel(id){
     var model = new observable.Observable();
     model.id = id;
 
-    model.calcAge = function(birthDate){
-        var now = Date.now();
-        var diff = Math.abs(now - birthDate) / 1000 / 31536000;
+    model.genders = ["Female", "Male", "Other"];
+    model.calcAge = function(year, month, day) {
+            var date = new Date(year, month, day);
+            var now = Date.now();
+            var diff = Math.abs(now - date) / 1000 / 31536000;
 
-        return diff.toFixed(1);
-    };
-    model.birthDate = null;
-    model.gender = null;
+            return diff.toFixed(1);
+        };
     
     return model;
 }
@@ -32,7 +31,9 @@ exports.onLoaded = function(args) {
             model.id = item.id;
             model.title = item.title;
             model.gender = item.gender;
-            model.birthDate = item.birthDate;
+            model.year = item.year;
+            model.month = item.month;
+            model.day = item.day;
             model.image = item.image;
             model.lat = item.lat;
             model.long = item.long;
@@ -52,11 +53,10 @@ exports.onLoaded = function(args) {
 exports.onAddTap = function(args) {
     var page = args.object;
     var scrapbook = page.bindingContext;
-    
+
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        context: { model: new scrapbookPageModel(scrapbook.pages.length) },
-        clearHistory: true
+        context: { model: new scrapbookPageModel(scrapbook.pages.length) }
     });
 };
 
@@ -66,7 +66,6 @@ exports.onItemTap = function(args) {
     
     frame.topmost().navigate({ 
         moduleName: "views/scrapbookUpdate-page", 
-        context: { model: scrapbook.pages.getItem(args.index) },
-        clearHistory: true
+        context: { model: scrapbook.pages.getItem(args.index) }
     });
-}
+};
