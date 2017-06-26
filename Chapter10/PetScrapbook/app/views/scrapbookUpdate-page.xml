@@ -24,7 +24,7 @@
                 <Label text="Image:" class="label" />
                 <Image src="{{ image }}" stretch="none" />
                 <StackLayout orientation="horizontal">
-                    <Label text="{{ (lat, long), 'Picture taken at ' + lat + ', ' + long }}" />
+                    <Label class="footnote" text="{{ (lat, long), 'Picture taken at ' + lat + ', ' + long }}" />
                 </StackLayout>
             </StackLayout>
 
