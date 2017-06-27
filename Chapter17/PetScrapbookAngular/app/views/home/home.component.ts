@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { RouterExtensions } from "nativescript-angular/router";
+import { RouterExtensions } from "nativescript-angular/router"; 
 
 @Component({
   selector: "home",
@@ -7,10 +7,14 @@ import { RouterExtensions } from "nativescript-angular/router";
   styleUrls: ["views/home/home.css"]
 })
 export class HomeComponent {
-  constructor(private routerExtensions: RouterExtensions) {
+  constructor(private routerExtensions: RouterExtensions) { 
   }
 
-  onContinueTap(): void {    
-    this.routerExtensions.navigate(["list"]);
+  onContinueTap(): void {
+    this.routerExtensions.navigate(["list"]); 
+  }
+
+  onAboutTap(): void {
+    this.routerExtensions.navigate(["about"]); 
   }
 }

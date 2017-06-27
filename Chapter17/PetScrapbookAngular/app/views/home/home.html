@@ -1,11 +1,14 @@
-<ScrollView>
-    <StackLayout>
-        <Label class="h1 text-center m-y-10" text="Pet Scrapbook"></Label>
-        <Image src="~/images/home.png"></Image>
-        <Label class="footnote text-center m-y-10" text="Brosteins ©2016"></Label>
-        <StackLayout orientation="horizontal" horizontalAlignment="center">
-            <Button class="btn btn-primary btn-rounded-sm btn-active m-r-20" text="About"></Button>
-            <Button class="btn btn-primary btn-rounded-sm btn-active m-l-20" text="Continue" (tap)="onContinueTap()"></Button>
-        </StackLayout>
+<ScrollView> 
+  <StackLayout> 
+    <Label class="h1 text-center m-y-10" text="Pet Scrapbook"></Label> 
+    <Image src="~/images/home.png"></Image> 
+    <Label class="footnote text-center m-y-10" text="Brosteins ©2016"></Label> 
+    <StackLayout orientation="horizontal" horizontalAlignment="center">
+      <Button class="btn btn-primary btn-rounded-sm btn-active m-r-20" 
+        text="About" (tap)="onAboutTap()"></Button>
+      <Button class="btn btn-primary btn-rounded-sm btn-active m-l-20" 
+        text="Continue" (tap)="onContinueTap()">
+      </Button>
     </StackLayout>
+  </StackLayout>
 </ScrollView>
