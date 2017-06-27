@@ -6,6 +6,7 @@ import { routes, navigatableComponents } from "./app.routing";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./views/home/home.component";
 import { ListComponent } from "./views/list/list.component";
+import { AboutComponent } from "./views/about/about.component";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { ListComponent } from "./views/list/list.component";
     ...navigatableComponents
   ],
   bootstrap: [
-    AppComponent //#A
+    AppComponent
   ],
   imports: [
     NativeScriptModule,

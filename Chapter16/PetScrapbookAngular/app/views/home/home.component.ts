@@ -13,4 +13,8 @@ export class HomeComponent {
   onContinueTap(): void {
     this.routerExtensions.navigate(["list"]); 
   }
+
+  onAboutTap(): void {
+    this.routerExtensions.navigate(["about"]); 
+  }
 }
