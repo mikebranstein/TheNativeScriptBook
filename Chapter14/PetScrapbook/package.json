@@ -1,0 +1,29 @@
+{
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "com.brosteins.petscrapbook",
+    "tns-ios": {
+      "version": "3.0.1"
+    },
+    "tns-android": {
+      "version": "3.0.1"
+    }
+  },
+  "dependencies": {
+    "nativescript-camera": "3.0.0",
+    "nativescript-geolocation": "3.0.0",
+    "nativescript-theme-core": "1.0.4",
+    "tns-core-modules": "^3.0.1",
+    "tns-core-modules-snapshot": "2.4.2-5.2.361"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.20.0",
+    "babel-types": "6.20.0",
+    "babylon": "6.14.1",
+    "lazy": "1.0.11",
+    "nativescript-dev-android-snapshot": "^0.*.*"
+  }
+}
