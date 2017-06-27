@@ -1,55 +1,48 @@
 var observable = require("data/observable");
 var observableArray = require("data/observable-array");
 var fileSystemService = require("~/data/fileSystemService");
+
+var observable = require("data/observable");
+var observableArray = require("data/observable-array");
+var fileSystemService = require("~/data/fileSystemService");
 var viewModule = require("ui/core/view"); 
 
-var camera = require("nativescript-camera");
-var geolocation = require("nativescript-geolocation");
-var image = require("image-source");
-
-
 var page;
-var updateStackLayout;
+var updateStackLayout; 
 
 exports.onLoaded = function(args) {
   page = args.object;
-  updateStackLayout =
-    viewModule.getViewById(page, "updateStackLayout"); 
+  updateStackLayout = viewModule.getViewById(page, "updateStackLayout"); 
 
-  var scrapbook = new observable.fromObject({     
-    pages: new observableArray.ObservableArray(), 
-    selectedPage: null,
-    calcAge: function (birthDate) {
-        var now = Date.now();
-        var diff = Math.abs(now - birthDate) / 1000 / 31536000;
+  var scrapbook = new observable.fromObject({
+    pages: new observableArray.ObservableArray(),
+    selectedPage: null
+  });
 
-        return diff.toFixed(1);
-    }                        
-  });                                             
+  var pages = fileSystemService.fileSystemService.getPages();
 
-  var pages = fileSystemService.fileSystemService.getPages(); 
-
-  if (pages.length !== 0) {                                   
-    pages.forEach(function (item) {                           
-      var model = scrapbookPageModel();                   
+  if (pages.length !== 0) {
+    pages.forEach(function (item) {
+      var model = new scrapbookPageModel();
             
-      model.id = item.id;                                     
-      model.title = item.title;                               
-      model.gender = item.gender;                             
-      model.birthDate = item.birthDate;                       
-      model.image = item.image;                               
-      model.lat = item.lat;                                   
+      model.id = item.id;
+      model.title = item.title;
+      model.gender = item.gender;
+      model.birthDate = item.birthDate;
+      model.image = item.image;
+      model.lat = item.lat;
       model.long = item.long;
             
-      scrapbook.pages.push(model);                            
-    });                                                       
-  }                                                           
+      scrapbook.pages.push(model);
+    });
+  }
 
-  page.bindingContext = scrapbook; 
+  page.bindingContext = scrapbook;
 };
 
+
 function scrapbookPageModel(id) {
-  var model = new observable.fromObject({ 
+  var model = new observable.Observable({ 
     id: id,
     title: null, 
     birthDate: null, 
@@ -79,7 +72,6 @@ exports.onAddTap = function(args) {
     scrapbook.pages.getItem(scrapbook.pages.length - 1));
   resetActivePage();
 };
-
 function resetActivePage() {
   var scrapbook = page.bindingContext;
     
@@ -92,8 +84,6 @@ function resetActivePage() {
   }
 }
 
-
-
 exports.onItemTap = function(args) {
   var scrapbook = page.bindingContext;
 
@@ -101,6 +91,17 @@ exports.onItemTap = function(args) {
   updateStackLayout.bindingContext = scrapbook.selectedPage;
     
   resetActivePage();
+};
+
+
+exports.onDoneTap = function(args) {    
+  var scrapbook = page.bindingContext;
+    
+  fileSystemService.fileSystemService
+    .savePage(scrapbook.selectedPage); 
+
+  scrapbook.set("selectedPage", null); 
+  resetActivePage();                   
 };
 
 
@@ -112,7 +113,6 @@ exports.onBirthDateTap = function(args) {
 
   page.showModal(modalPageModule, context, 
     function closeCallback(birthDate) {
-        console.log("birthdate: " + birthDate);
       updateStackLayout.bindingContext.set("birthDate", birthDate); 
     }, fullscreen);
 };
@@ -127,34 +127,29 @@ exports.onGenderTap = function(args) {
   }, fullscreen);
 };
 
+var camera = require("nativescript-camera");
+var geolocation = require("nativescript-geolocation");
+var image = require("image-source");
+
 exports.onAddImageTap = function (args) {
-    var scrapbookPage = updateStackLayout.bindingContext; 
+  var scrapbookPage = updateStackLayout.bindingContext; 
 
-    if (!geolocation.isEnabled()) {
-        geolocation.enableLocationRequest();
-    }
+  if (!geolocation.isEnabled()) {
+    geolocation.enableLocationRequest();
+  }
 
-    camera.takePicture({ width: 100, height: 100, keepAspectRatio: true })
-        .then(function (picture) {
-            image.fromAsset(picture).then(function (imageSource) {
-                scrapbookPage.set("image", imageSource);
-            });
+  camera
+    .takePicture({ width: 100, height: 100, keepAspectRatio: true })
+    .then(function (picture) {
+      image.fromAsset(picture).then(function (imageSource) {
+        scrapbookPage.set("image", imageSource);
+      });
 
-            geolocation
-                .getCurrentLocation()
-                .then(function (location) {
-                    scrapbookPage.set("lat", location.latitude);
-                    scrapbookPage.set("long", location.longitude);
-                });
+      geolocation
+        .getCurrentLocation()
+        .then(function (location) {
+          scrapbookPage.set("lat", location.latitude);
+          scrapbookPage.set("long", location.longitude);
+        });
     });
-};
-
-exports.onDoneTap = function(args) {    
-  var scrapbook = page.bindingContext;
-    
-  fileSystemService.fileSystemService
-    .savePage(scrapbook.selectedPage); 
-
-  scrapbook.set("selectedPage", null); 
-  resetActivePage();                   
 };

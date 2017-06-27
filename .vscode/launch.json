@@ -6,7 +6,7 @@
             "type": "nativescript",
             "request": "launch",
             "platform": "ios",
-            "appRoot": "${workspaceRoot}/Chapter11/PetScrapbook",
+            "appRoot": "${workspaceRoot}/Chapter11/PetScrapbook-ch10",
             "sourceMaps": true,
             "watch": true
         },

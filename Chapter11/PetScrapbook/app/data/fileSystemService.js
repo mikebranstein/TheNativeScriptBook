@@ -13,6 +13,7 @@ fileSystemService.prototype.getPages = function () {
     }
 
     pages.forEach(function (page) {
+        page.birthDate = new Date(page.birthDate);
         if (page.imageBase64 != null) {
             page.image = imageModule.fromBase64(page.imageBase64);
         }   
@@ -34,7 +35,8 @@ fileSystemService.prototype.savePage = function (scrapbookPage) {
             title: scrapbookPage.title,
             gender: scrapbookPage.gender,
             birthDate: scrapbookPage.birthDate,
-            imageBase64: scrapbookPage.image != null ? scrapbookPage.image.toBase64String("png") : null,
+            imageBase64: scrapbookPage.image != null ?
+              scrapbookPage.image.toBase64String("png") : null,
             lat: scrapbookPage.lat,
             long: scrapbookPage.long
         };
@@ -45,7 +47,8 @@ fileSystemService.prototype.savePage = function (scrapbookPage) {
             title: scrapbookPage.title,
             gender: scrapbookPage.gender,
             birthDate: scrapbookPage.birthDate,
-            imageBase64: scrapbookPage.image != null ? scrapbookPage.image.toBase64String("png") : null,
+            imageBase64: scrapbookPage.image != null ?           
+              scrapbookPage.image.toBase64String("png") : null,
             lat: scrapbookPage.lat,
             long: scrapbookPage.long
         });
