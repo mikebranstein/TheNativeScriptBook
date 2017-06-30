@@ -55,7 +55,7 @@ var ScrapbookDetail = (function (_super) {
             var rootStackLayout = new StackLayout();
 
             var formStackLayout = new StackLayout();
-            formStackLayout.cssClass = "form";
+            formStackLayout.className = "form";
             formStackLayout.addChild(createTextInputField(this._item, 
                 { text: "Name:" }, 
                 { sourceProperty: "title" }, 
@@ -72,7 +72,7 @@ var ScrapbookDetail = (function (_super) {
             rootStackLayout.addChild(formStackLayout);
 
             var button = new Button();
-            button.cssClass = "btn btn-primary btn-rounded-sm btn-active";
+            button.className = "btn btn-primary btn-rounded-sm btn-active";
             button.text = "Add Image";
             button.on("tap", function() { 
                 onAddImageTap(this);
@@ -117,10 +117,10 @@ var ScrapbookDetail = (function (_super) {
 
         var createTextInputField = function (bindingContext, labelText, textFieldText, textEditable, onTapEventName, textHint) {
             var stackLayout = new StackLayout();
-            stackLayout.cssClass = "input-field";
+            stackLayout.className = "input-field";
             
             var label = new Label();
-            label.cssClass = "label";
+            label.className = "label";
             if (labelText.text === null || labelText.text === undefined) {
                 bindField(label, bindingContext, labelText.sourceProperty, labelText.expression, "text", false);
             } else {
@@ -129,7 +129,7 @@ var ScrapbookDetail = (function (_super) {
             stackLayout.addChild(label);
 
             var textField = new TextField();
-            textField.cssClass = "input";
+            textField.className = "input";
             textField.editable = textEditable === null ? true : textEditable;
             if (textHint !== null) {
                 textField.hint = textHint;
@@ -153,10 +153,10 @@ var ScrapbookDetail = (function (_super) {
 
         var createImageInputField = function (bindingContext) {
             var stackLayout = new StackLayout();
-            stackLayout.cssClass = "input-field";
+            stackLayout.className = "input-field";
             
             var label = new Label();
-            label.cssClass = "label";
+            label.className = "label";
             label.text = "Image:"
             stackLayout.addChild(label);
 
@@ -166,7 +166,7 @@ var ScrapbookDetail = (function (_super) {
             stackLayout.addChild(image);
 
             label = new Label();
-            label.cssClass = "footnote";
+            label.className = "footnote";
             label.text = "Image:"
             bindField(label, bindingContext, "(lat, long)", "(lat === undefined || long === undefined || lat === null || long === null) ? '' : 'Picture taken at ' + lat + ', ' + long", "text", false);
             stackLayout.addChild(label);
