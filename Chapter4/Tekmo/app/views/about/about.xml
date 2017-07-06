@@ -1,0 +1,6 @@
+<Page>
+  <StackLayout>
+    <Label textWrap="true" text="Small company that wants to bring you the best in retro gaming!" /> 
+    <Label text="Come visit us in Louisville, KY" /> 
+  </StackLayout>
+</Page>
