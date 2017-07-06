@@ -7,7 +7,15 @@
 
 android {  
   defaultConfig {  
-    generatedDensities = []  
+    generatedDensities = []
+    applicationId = "__PACKAGE__" 
+    
+    //override supported platforms
+    // ndk {
+    //       abiFilters.clear()
+    //   		abiFilters "armeabi-v7a"
+ 		// }
+  
   }  
   aaptOptions {  
     additionalParameters "--no-version-vectors"  
