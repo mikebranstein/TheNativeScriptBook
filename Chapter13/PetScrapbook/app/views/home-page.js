@@ -3,7 +3,7 @@ var frame = require("ui/frame");
 
 exports.onLoaded = function(args) {
     var page = args.object;
-    var home = new observable.Observable({
+    var home = new observable.fromObject({
         title: "Pet Scrapbook",
         footer: "Brosteins ©2016"
     });
