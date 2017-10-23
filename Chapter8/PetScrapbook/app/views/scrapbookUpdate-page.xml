@@ -2,7 +2,7 @@
     <StackLayout>
         <Label text="{{ title, title + ' Scrapbook Page' }}" />
         <TextField class="header" text="{{ title }}" hint="Enter title..."/>
-        <Label text="{{ 'Age: ' + calcAge(year, month, day) + ' years old'}} " />
+        <Label text="{{ 'Age: ' + calcAge(date) + ' years old'}} " />
         <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}" />
         <Label text="Gender: " />
         <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}" />

@@ -4,10 +4,17 @@ var scrapbook;
 
 exports.onLoaded = function(args) {
     var page = args.object;
-    var index = page.navigationContext.index;
-    scrapbook = page.navigationContext.model
+    var scrapbook = new observable.fromObject({
+        genders: ["Female", "Male", "Other"],
+        calcAge: function(birthDate){           
+			var now = Date.now();
+            var diff = Math.abs(now - birthDate) / 1000 / 31536000;
 
-    page.bindingContext = scrapbook.pages.getItem(index);
+            return diff.toFixed(1);
+        }
+    });
+    
+    page.bindingContext = scrapbook;
 };
 
 exports.onDoneTap = function(args) {    
