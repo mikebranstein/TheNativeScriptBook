@@ -12,3 +12,6 @@ Most code examples will be are also provided with links to run and test on the [
 - Hello World: https://play.nativescript.org/?template=play-js&id=5FpdIF&v=3
 
 ## Chapter 3
+- button example: https://play.nativescript.org/?template=play-js&id=DMgM12&v=3
+- button example platform specific: https://play.nativescript.org/?template=play-js&id=8Rvb5i&v=3
+- button example platform specific 2: https://play.nativescript.org/?template=play-js&id=3YXgih&v=2
