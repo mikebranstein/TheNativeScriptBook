@@ -5,15 +5,15 @@
   "repository": "<fill-your-repository-here>",
   "nativescript": {
     "id": "org.nativescript.screensize",
-    "tns-ios": {
-      "version": "3.0.1"
-    },
     "tns-android": {
-      "version": "3.0.0"
+      "version": "4.0.0"
+    },
+    "tns-ios": {
+      "version": "4.0.1"
     }
   },
   "dependencies": {
-    "tns-core-modules": "^3.0.1"
+    "tns-core-modules": "^4.0.0"
   },
   "devDependencies": {
     "babel-traverse": "6.9.0",

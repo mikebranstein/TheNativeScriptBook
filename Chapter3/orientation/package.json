@@ -6,10 +6,10 @@
   "nativescript": {
     "id": "org.nativescript.orientation",
     "tns-ios": {
-      "version": "3.0.1"
+      "version": "4.0.1"
     }
   },
   "dependencies": {
-    "tns-core-modules": "^3.0.1"
+    "tns-core-modules": "^4.0.0"
   }
 }
