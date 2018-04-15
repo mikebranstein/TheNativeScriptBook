@@ -17,3 +17,5 @@ Most code examples will be are also provided with links to run and test on the [
 - button example platform specific 2: https://play.nativescript.org/?template=play-js&id=3YXgih&v=2
 - orientation: https://play.nativescript.org/?template=play-js&id=GpMfbe&v=2
 - myapp: https://play.nativescript.org/?template=play-js&id=kZRkPj&v=2
+
+## Chapter 4
