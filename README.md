@@ -19,3 +19,12 @@ Most code examples will be are also provided with links to run and test on the [
 - myapp: https://play.nativescript.org/?template=play-js&id=kZRkPj&v=2
 
 ## Chapter 4
+### Tekmo App
+- 4.1: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=6
+- 4.2: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=9
+- 4.3: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=10
+- 4.4: N/A
+- 4.5: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=16
+- 4.6: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=18
+- 4.7: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=38
+- 4.8: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=39
