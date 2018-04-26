@@ -26,5 +26,5 @@ Most code examples will be are also provided with links to run and test on the [
 - 4.4: N/A
 - 4.5: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=16
 - 4.6: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=18
-- 4.7: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=38
-- 4.8: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=39
+- 4.7: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=42
+- 4.8: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=43
