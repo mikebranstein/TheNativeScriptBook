@@ -28,3 +28,21 @@ Most code examples will be are also provided with links to run and test on the [
 - 4.6: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=18
 - 4.7: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=42
 - 4.8: https://play.nativescript.org/?template=play-js&id=JSPR2b&v=43
+
+## Chapter 5
+### Tekmo App Continued
+- 5.1: https://play.nativescript.org/?template=play-js&id=3OmKi1&v=3
+- 5.2: https://play.nativescript.org/?template=play-js&id=3OmKi1&v=3 (same as 5.1)
+- 5.3: https://play.nativescript.org/?template=play-js&id=89ootX&v=3
+- 5.4: https://play.nativescript.org/?template=play-js&id=89ootX&v=12
+- 5.5: https://play.nativescript.org/?template=play-js&id=89ootX&v=13
+- 5.6: https://play.nativescript.org/?template=play-js&id=89ootX&v=14
+- 5.7: https://play.nativescript.org/?template=play-js&id=89ootX&v=15
+- 5.8: https://play.nativescript.org/?template=play-js&id=89ootX&v=16
+- 5.9: https://play.nativescript.org/?template=play-js&id=89ootX&v=17
+- 5.10: https://play.nativescript.org/?template=play-js&id=89ootX&v=18
+- 5.11: https://play.nativescript.org/?template=play-js&id=89ootX&v=19
+- 5.12: N/A
+- 5.13: N/A
+
+
