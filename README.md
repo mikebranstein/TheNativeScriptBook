@@ -45,4 +45,11 @@ Most code examples will be are also provided with links to run and test on the [
 - 5.12: N/A
 - 5.13: N/A
 
-
+## Chapter 6
+### Tekmo App Continued
+- 6.1: //TODO:
+- 6.2: https://play.nativescript.org/?template=play-js&id=2xxKKW&v=4
+- 6.3: https://play.nativescript.org/?template=play-js&id=2xxKKW&v=5
+- 6.4: https://play.nativescript.org/?template=play-js&id=2xxKKW&v=7
+- 6.5: N/A
+- 6.6: https://play.nativescript.org/?template=play-js&id=2xxKKW&v=8
