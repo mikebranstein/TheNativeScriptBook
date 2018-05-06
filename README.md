@@ -47,7 +47,7 @@ Most code examples will be are also provided with links to run and test on the [
 
 ## Chapter 6
 ### Tekmo App Continued
-- 6.1: //TODO:
+- 6.1: https://play.nativescript.org/?template=play-js&id=jJSQqX&v=2
 - 6.2: https://play.nativescript.org/?template=play-js&id=2xxKKW&v=4
 - 6.3: https://play.nativescript.org/?template=play-js&id=2xxKKW&v=5
 - 6.4: https://play.nativescript.org/?template=play-js&id=2xxKKW&v=7
