@@ -53,3 +53,21 @@ Most code examples will be are also provided with links to run and test on the [
 - 6.4: https://play.nativescript.org/?template=play-js&id=2xxKKW&v=7
 - 6.5: N/A
 - 6.6: https://play.nativescript.org/?template=play-js&id=2xxKKW&v=8
+
+## Chapter 7
+### Tekmo App Continued
+- 7.1: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=3
+- 7.2: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=5
+- 7.3: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=6
+- 7.4: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=7
+- 7.5: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=8
+- 7.6: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=9
+- 7.7: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=10
+- 7.8: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=12
+- 7.9 & 7.10 & 7.11: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=15
+- 7.12: https://play.nativescript.org/?template=play-js&id=0Xg8d6&v=2
+- 7.13: N/A
+- 7.14: N/A
+- 7.15: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=16
+- highlight image: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=17
+
