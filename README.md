@@ -71,3 +71,13 @@ Most code examples will be are also provided with links to run and test on the [
 - 7.15: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=16
 - highlight image: https://play.nativescript.org/?template=play-js&id=8j4jSU&v=17
 
+## Chapter 8
+### Pet Scrapbook
+- 8.1: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=3
+- 8.2: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=4
+- 8.3: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=5
+- 8.4 & 8.5: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=7
+- 8.6, 8.7, & 8.8: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=9
+- 8.9 & 8.10: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=10
+- 8.11 & 8.12: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=12
+- 8.13: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=13
