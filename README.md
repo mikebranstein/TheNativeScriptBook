@@ -79,5 +79,13 @@ Most code examples will be are also provided with links to run and test on the [
 - 8.4 & 8.5: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=7
 - 8.6, 8.7, & 8.8: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=9
 - 8.9 & 8.10: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=10
-- 8.11 & 8.12: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=12
-- 8.13: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=13
+- 8.11 & 8.12: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=16
+- 8.13: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=17
+- 8.14: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=20
+- 8.15 & 8.16: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=21
+- 8.17 (observable array example): https://play.nativescript.org/?template=play-js&id=9gsDfR&v=3
+- 8.18 & 8.19: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=22
+- 8.20: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=23
+- 8.21 & 8.22: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=24
+- 8.23: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=25
+- 8.24: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=26
