@@ -89,3 +89,12 @@ Most code examples will be are also provided with links to run and test on the [
 - 8.21 & 8.22: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=24
 - 8.23: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=25
 - 8.24: https://play.nativescript.org/?template=play-js&id=ihli0Y&v=26
+
+## Chapter 9 
+### Pet Scrapbook Continued
+- 9.1: https://play.nativescript.org/?template=play-js&id=iH0zRF&v=2
+- 9.2: https://play.nativescript.org/?template=play-js&id=r547M9&v=3
+- 9.3: https://play.nativescript.org/?template=play-js&id=r547M9&v=4
+- 9.4: https://play.nativescript.org/?template=play-js&id=r547M9&v=5
+- 9.5: N/A
+- 9.6: https://play.nativescript.org/?template=play-js&id=r547M9&v=6
