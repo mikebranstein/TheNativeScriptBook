@@ -98,3 +98,12 @@ Most code examples will be are also provided with links to run and test on the [
 - 9.4: https://play.nativescript.org/?template=play-js&id=r547M9&v=5
 - 9.5: N/A
 - 9.6: https://play.nativescript.org/?template=play-js&id=r547M9&v=6
+- 9.7 & 9.8: https://play.nativescript.org/?template=play-js&id=r547M9&v=10
+- 9.9: https://play.nativescript.org/?template=play-js&id=r547M9&v=11
+- 9.10: https://play.nativescript.org/?template=play-js&id=r547M9&v=12
+- 9.11: https://play.nativescript.org/?template=play-js&id=r547M9&v=13
+- 9.12: https://play.nativescript.org/?template=play-js&id=r547M9&v=14
+- 9.13: https://play.nativescript.org/?template=play-js&id=r547M9&v=15
+- 9.14 & 9.15: https://play.nativescript.org/?template=play-js&id=r547M9&v=16
+- 9.16: https://play.nativescript.org/?template=play-js&id=r547M9&v=20
+- 9.17: https://play.nativescript.org/?template=play-js&id=r547M9&v=21
