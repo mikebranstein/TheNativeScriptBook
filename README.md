@@ -110,7 +110,19 @@ Most code examples will be are also provided with links to run and test on the [
 
 ## Chapter 10
 ### Pet Scrapbook Continued
-- 10.1: 
+- 10.1 & 10.2:https://play.nativescript.org/?template=play-js&id=L3oOX0&v=8
+- 10.3: https://play.nativescript.org/?template=play-js&id=L3oOX0&v=9
+- 10.4 & 10.5: N/A
+- 10.6: https://play.nativescript.org/?template=play-js&id=L3oOX0&v=10
+- 10.6 (circle images): https://play.nativescript.org/?template=play-js&id=L3oOX0&v=11
+- 10.7: N/A
+- 10.8: https://play.nativescript.org/?template=play-js&id=L3oOX0&v=12
+- 10.9: https://play.nativescript.org/?template=play-js&id=L3oOX0&v=13
+- 10.10 & 10.11: https://play.nativescript.org/?template=play-js&id=L3oOX0&v=14
+
+## Chapter 11
+### Pet Scrapbook Continued
+- 11.1:
 
 ## Chapter 16
 ### Pet Scrapbook Angular
