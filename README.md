@@ -129,5 +129,5 @@ Most code examples will be are also provided with links to run and test on the [
 - Beginning: https://play.nativescript.org/?template=play-ng&id=GfqjRH
 - 16.1: https://play.nativescript.org/?template=play-ng&id=GfqjRH
 - 16.2: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=4
-- 16.3: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=6
-- 16.4: 
+- 16.3 - 16.9: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=6
+- 16.10 - 16.13: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=9
