@@ -122,7 +122,26 @@ Most code examples will be are also provided with links to run and test on the [
 
 ## Chapter 11
 ### Pet Scrapbook Continued
-- 11.1:
+- 11.1: https://play.nativescript.org/?template=play-js&id=557Zvo&v=3
+- 11.2: https://play.nativescript.org/?template=play-js&id=557Zvo&v=4
+- 11.3: https://play.nativescript.org/?template=play-js&id=557Zvo&v=5
+- 11.4: https://play.nativescript.org/?template=play-js&id=557Zvo&v=6
+- 11.5: https://play.nativescript.org/?template=play-js&id=557Zvo&v=7
+- 11.6: https://play.nativescript.org/?template=play-js&id=557Zvo&v=8
+- 11.7 - 11.10: https://play.nativescript.org/?template=play-js&id=557Zvo&v=9
+- 11.11: https://play.nativescript.org/?template=play-js&id=557Zvo&v=10
+- 11.12: https://play.nativescript.org/?template=play-js&id=557Zvo&v=11
+- 11.13: https://play.nativescript.org/?template=play-js&id=557Zvo&v=12
+- 11.14: https://play.nativescript.org/?template=play-js&id=557Zvo&v=13
+- 11.15 - 11.20: https://play.nativescript.org/?template=play-js&id=557Zvo&v=18
+- 11.20 & 11.21: https://play.nativescript.org/?template=play-js&id=557Zvo&v=19
+- 11.22: https://play.nativescript.org/?template=play-js&id=557Zvo&v=20
+- 11.23: N/A
+- 11.24 & 11.25: https://play.nativescript.org/?template=play-js&id=557Zvo&v=21
+- 11.26 - 11.28: https://play.nativescript.org/?template=play-js&id=557Zvo&v=23
+- 11.29: https://play.nativescript.org/?template=play-js&id=557Zvo&v=24
+- 11.30: https://play.nativescript.org/?template=play-js&id=557Zvo&v=25
+- 11.31: https://play.nativescript.org/?template=play-js&id=557Zvo&v=26
 
 ## Chapter 16
 ### Pet Scrapbook Angular
