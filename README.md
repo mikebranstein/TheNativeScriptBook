@@ -150,3 +150,15 @@ Most code examples will be are also provided with links to run and test on the [
 - 16.2: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=4
 - 16.3 - 16.9: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=6
 - 16.10 - 16.14: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=26
+- 16.15 - 16.19: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=29
+
+## Chapter 17
+### Angular Data Binding and Services
+- Beginning: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=29
+- 17.1 - 17.2: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=30
+- 17.3: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=36
+- 17.4: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=37
+- 17.5: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=38
+- 17.6: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=39
+- 17.7: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=41
+- 17.8 - 17.9: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=42
