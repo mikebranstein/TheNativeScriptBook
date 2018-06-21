@@ -129,19 +129,21 @@ Most code examples will be are also provided with links to run and test on the [
 - 11.5: https://play.nativescript.org/?template=play-js&id=557Zvo&v=7
 - 11.6: https://play.nativescript.org/?template=play-js&id=557Zvo&v=8
 - 11.7 - 11.10: https://play.nativescript.org/?template=play-js&id=557Zvo&v=9
-- 11.11: https://play.nativescript.org/?template=play-js&id=557Zvo&v=10
-- 11.12: https://play.nativescript.org/?template=play-js&id=557Zvo&v=11
-- 11.13: https://play.nativescript.org/?template=play-js&id=557Zvo&v=12
-- 11.14: https://play.nativescript.org/?template=play-js&id=557Zvo&v=13
-- 11.15 - 11.20: https://play.nativescript.org/?template=play-js&id=557Zvo&v=18
-- 11.20 & 11.21: https://play.nativescript.org/?template=play-js&id=557Zvo&v=19
-- 11.22: https://play.nativescript.org/?template=play-js&id=557Zvo&v=20
+- 11.10 + Homework (Gender Modal): https://play.nativescript.org/?template=play-js&id=557Zvo&v=27
+- 11.11: https://play.nativescript.org/?template=play-js&id=557Zvo&v=28
+- 11.12: https://play.nativescript.org/?template=play-js&id=557Zvo&v=29
+- 11.13: https://play.nativescript.org/?template=play-js&id=557Zvo&v=30
+- 11.14: https://play.nativescript.org/?template=play-js&id=557Zvo&v=31
+- 11.15: N/A
+- 11.16: https://play.nativescript.org/?template=play-js&id=557Zvo&v=34
+- 11.17 - 11.21: https://play.nativescript.org/?template=play-js&id=557Zvo&v=35
+- 11.22: https://play.nativescript.org/?template=play-js&id=557Zvo&v=36
 - 11.23: N/A
-- 11.24 & 11.25: https://play.nativescript.org/?template=play-js&id=557Zvo&v=21
-- 11.26 - 11.28: https://play.nativescript.org/?template=play-js&id=557Zvo&v=23
-- 11.29: https://play.nativescript.org/?template=play-js&id=557Zvo&v=24
-- 11.30: https://play.nativescript.org/?template=play-js&id=557Zvo&v=25
-- 11.31: https://play.nativescript.org/?template=play-js&id=557Zvo&v=26
+- 11.24 & 11.25: https://play.nativescript.org/?template=play-js&id=557Zvo&v=37
+- 11.26 - 11.28: https://play.nativescript.org/?template=play-js&id=557Zvo&v=38
+- 11.29: https://play.nativescript.org/?template=play-js&id=557Zvo&v=39
+- 11.30: https://play.nativescript.org/?template=play-js&id=557Zvo&v=40
+- 11.31: https://play.nativescript.org/?template=play-js&id=557Zvo&v=41
 
 ## Chapter 16
 ### Pet Scrapbook Angular
