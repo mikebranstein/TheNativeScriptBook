@@ -168,11 +168,11 @@ Most code examples will be are also provided with links to run and test on the [
 - Two-way binding before 17.17: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=54
 - Angular data formatting before 17.17: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=55
 - 17.17 - 17.18: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=56
-17.19: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=57
-17.20: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=58
-17.21 - 17.22: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=64
-17.23: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=65
-17.24: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=66
-17.25: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=67
+- 17.19: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=57
+- 17.20: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=58
+- 17.21 - 17.22: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=64
+- 17.23: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=65
+- 17.24: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=66
+- 17.25: https://play.nativescript.org/?template=play-ng&id=GfqjRH&v=67
 
 
